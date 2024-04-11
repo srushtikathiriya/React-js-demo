@@ -1,0 +1,39 @@
+const TableData = [
+    {
+        id:"#1111",
+        name:"Srushti",
+        email:"srushti@gmail.com",
+        city:"Surat",
+        phone:"9877478682"
+    },
+    {
+        id:"#1112",
+        name:"Mansi",
+        email:"Mansi@gmail.com",
+        city:"Junagadh",
+        phone:"9677478683"
+    },
+    {
+        id:"#1113",
+        name:"Priyanshi",
+        email:"priyanshi@gmail.com",
+        city:"Ahmedabad",
+        phone:"9577478821"
+    },
+    {
+        id:"#1114",
+        name:"Mahek",
+        email:"Mahek@gmail.com",
+        city:"Mumbai",
+        phone:"9477478683"
+    },
+    {
+        id:"#1115",
+        name:"Keni",
+        email:"Keni@gmail.com",
+        city:"Rajkot",
+        phone:"9857478689"
+    }
+]
+
+export default TableData;
