@@ -9,6 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { colors } from '@mui/material';
 import { pink } from '@mui/material/colors';
+import Style from "../Useeffecttablefetching/Style.css"
 
 export default function CustomizedTables() {
     const[row,setRow] = React.useState([])
@@ -25,7 +26,7 @@ export default function CustomizedTables() {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
-          <TableRow>
+          <TableRow className='table'>
             <TableCell>Id</TableCell>
             <TableCell align="right">Name</TableCell>
             <TableCell align="right">Username</TableCell>
@@ -37,7 +38,7 @@ export default function CustomizedTables() {
         </TableHead>
         <TableBody>
           {row.map((row) => (
-            <TableRow hover key={row.arr} sx={{'&:last-child td , &:last-child th':{border:0}}}>
+            <TableRow className='box' hover key={row.arr} sx={{'&:last-child td , &:last-child th':{border:0}}}>
               <TableCell component="th" scope="row">
                 {row.id}
               </TableCell>
