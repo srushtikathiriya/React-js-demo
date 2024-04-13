@@ -1,0 +1,47 @@
+/* body{
+  background-color: black;
+} */
+.shadow {
+  background: linear-gradient(90deg, rgba(179,176,209,1) 12%, rgba(155,220,224,1) 38%, rgba(247,235,246,1) 54%, rgba(171,221,222,1) 68%, rgba(184,237,236,1) 84%, rgba(241,210,163,0.99781162464986) 100%);
+    padding-top: 70px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    position: absolute;
+    left: 20%;
+    margin-top: 80px;
+    width: 800px;
+    height: 400px;
+  }
+  
+  /* 
+  .shadow::before,
+  .shadow::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    background: linear-gradient(45deg,red,blue,green,yellow,#e11d74,black,#ffff00,#aa0000);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 25s linear infinite;
+  }
+  
+  .shadow::after {
+    filter: blur(25px);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  } */
