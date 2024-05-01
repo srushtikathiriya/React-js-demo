@@ -49,7 +49,7 @@ function Asidebar() {
                                   <li> <a href="#">Checkout</a> </li>
                                   <li> <Link to="/wishlist">Wishlist</Link> </li>
                                   <li> <Link to="/producttract">Product Track</Link> </li>
-                                  <li>  <Link to="*">404 / Error</Link> </li>
+                                  {/* <li>  <Link to="*">404 / Error</Link> </li> */}
                                 </ul>
                               </div>
                             </div>
@@ -99,7 +99,6 @@ function Asidebar() {
                                 <ul className='w-[15rem] my-3'>
                                   <li> <Link to="/blog">Blog</Link> </li>
                                   <li> <Link to="/blogdetail">Blog Details</Link> </li>
-                                  <li>  <Link to="*">404 / Error</Link> </li>
                                 </ul>
                               </div>
                             </div>
@@ -107,11 +106,6 @@ function Asidebar() {
                               <ul className='dropbtn1'>
                                 <li><Link to="/contact">Contact</Link></li>
                               </ul>
-                              <div className='dropdown-content1 ml-5 bg-white'>
-                                <ul className='w-[15rem] my-3'>
-                                  <li><Link to="*">404/Error</Link> </li>
-                                </ul>
-                              </div>
                             </div>
                           </div>
                         </div>

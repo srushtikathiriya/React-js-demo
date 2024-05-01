@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import Commingsoon from "../Asset/comming-soon-1.jpg"
+import Commingsoon from "../../Asset/comming-soon-1.jpg"
 import { CiMail } from "react-icons/ci";
 import { FaArrowRightLong } from "react-icons/fa6";
 

@@ -4,16 +4,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
-import Breadcrumb from '../Asset/breadcrumb-01.jpg'
-import AboutImg1 from "../Asset/about-img-1.jpg"
-import AboutImg2 from "../Asset/about-img-2.jpg"
-import Team1 from "../Asset/team-1.jpg"
-import Team2 from "../Asset/team-2.jpg"
-import Team3 from "../Asset/team-3.jpg"
-import Team4 from "../Asset/team-4.jpg"
-import Aboutbanner1 from "../Asset/about-banner-1.jpg"
-import Aboutbanner2 from "../Asset/about-banner-2.jpg"
-import "../page/About.css"
+import Breadcrumb from '../../Asset/breadcrumb-01.jpg'
+import AboutImg1 from "../../Asset/about-img-1.jpg"
+import AboutImg2 from "../../Asset/about-img-2.jpg"
+import Team1 from "../../Asset/team-1.jpg"
+import Team2 from "../../Asset/team-2.jpg"
+import Team3 from "../../Asset/team-3.jpg"
+import Team4 from "../../Asset/team-4.jpg"
+import Aboutbanner1 from "../../Asset/about-banner-1.jpg"
+import Aboutbanner2 from "../../Asset/about-banner-2.jpg"
+import "../About/About.css"
 import { useNavigate } from 'react-router-dom'
 
 function About() {

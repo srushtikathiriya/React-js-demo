@@ -1,14 +1,14 @@
 import React from 'react'
-import Breadcrumb from '../Asset/breadcrumb-01.jpg'
-import Track from "../Asset/track-bg.jpg"
+import Breadcrumb from '../../Asset/breadcrumb-01.jpg'
+import Track from "../../Asset/track-bg.jpg"
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineMail } from "react-icons/ai";
 import { FaArrowRightLong } from "react-icons/fa6";
-import Loginbg from "../Asset/login-bg.jpg"
+import Loginbg from "../../Asset/login-bg.jpg"
 import { IoLockClosedOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 import { IoKeyOutline } from "react-icons/io5";
-import Signinbg from "../Asset/sign-bg.jpg"
+import Signinbg from "../../Asset/sign-bg.jpg"
 
 function Signin() {
     const navigate = useNavigate();

@@ -11,22 +11,22 @@ import Thirdpart from "./Component/Thirdsec/Thirdpart";
 import Lastpart from "./Component/LastPart/Lastpart";
 import Footer from './Component/Footer/Footer';
 import Home from "./Pages/Home/Home";
-import Shop from "./Pages/Shop/Shop";
-import Page from "./Pages/page/Page";
+import Shop from "./Pages/Shop/Shop/Shop";
+import Page from "./Pages/page/Pages/Page";
 import Contact from "./Pages/Contact/Contact";
-import Blog from "./Pages/Blog/Blog";
+import Blog from "./Pages/Blog/Blog/Blog";
 import Error from "./Pages/Error/Error"
-import Shop2 from "./Pages/Shop/Shop2";
-import Blogdetails from "./Pages/Blog/Blogdetails"
-import Producttract from "./Pages/page/Producttract";
-import Wishlist from "./Pages/page/Wishlist";
-import Comingsoon from "./Pages/page/Comingsoon"
-import About from "./Pages/page/About";
-import Cart from "./Pages/page/Cart";
-import Signin from "./Pages/page/Signin";
-import Login from "./Pages/page/Login";
-import Woodenhome from "./Pages/Home/Woodenhome";
-import Shoplocation from "./Pages/Shop/Shoplocation";
+import Shop2 from "./Pages/Shop/Shop2/Shop2";
+import Blogdetails from "./Pages/Blog/Blogdetails/Blogdetails"
+import Producttract from "./Pages/page/Producttract/Producttract";
+import Wishlist from "./Pages/page/Wishlist/Wishlist";
+import Comingsoon from "./Pages/page/Comingsoon/Comingsoon"
+import About from "./Pages/page/About/About";
+import Cart from "./Pages/page/Cart/Cart";
+import Signin from "./Pages/page/Signin/Signin";
+import Login from "./Pages/page/Login/Login";
+import Woodenhome from "./Pages/Home/Woodenhome/Woodenhome";
+import Shoplocation from "./Pages/Shop/Shoplocation/Shoplocation";
 
 
 function App() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import Breadcrumb from '../Asset/breadcrumb-01.jpg'
+import Breadcrumb from '../../Asset/breadcrumb-01.jpg'
 
 
 function Wishlist() {

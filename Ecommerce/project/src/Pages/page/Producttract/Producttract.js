@@ -1,6 +1,6 @@
 import React from 'react'
-import Breadcrumb from '../Asset/breadcrumb-01.jpg'
-import Track from "../Asset/track-bg.jpg"
+import Breadcrumb from '../../Asset/breadcrumb-01.jpg'
+import Track from "../../Asset/track-bg.jpg"
 import { useNavigate } from 'react-router-dom';
 import { CiDeliveryTruck } from "react-icons/ci";
 import { FaAddressCard } from "react-icons/fa";

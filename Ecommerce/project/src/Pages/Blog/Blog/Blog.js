@@ -1,10 +1,10 @@
 import React from 'react'
-import Breadcrumb from '../Asset/breadcrumb-01.jpg'
+import Breadcrumb from '../../Asset/breadcrumb-01.jpg'
 import { useNavigate } from 'react-router-dom';
 import "../Blog/Blog.css"
-import Blog1 from "../Asset/blog-in-01.jpg";
-import Blog2 from "../Asset/blog-in-02.jpg";
-import Blog3 from "../Asset/blog-in-03.jpg";
+import Blog1 from "../../Asset/blog-in-01.jpg";
+import Blog2 from "../../Asset/blog-in-02.jpg";
+import Blog3 from "../../Asset/blog-in-03.jpg";
 
 
 function Blog() {
