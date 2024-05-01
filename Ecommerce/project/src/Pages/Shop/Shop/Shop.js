@@ -29,7 +29,7 @@ function Shop() {
 
   const navigate = useNavigate();
   const backToHome = () => {
-      navigate("/");
+    navigate("/");
   };
 
   return (
@@ -38,7 +38,7 @@ function Shop() {
         <div className='relative'>
           <img src={Breadcrumb} alt="" className='h-[200px]' />
           <div className='absolute top-14 left-20 breadcrumb-item-active'>
-          <button onClick={backToHome}>Home</button>
+            <button onClick={backToHome}>Home</button>
             <i class="fa-solid fa-minus ps-3 pe-3"></i>
             <span className='text-slate-400'>Shop</span>
             <h1 className='text-4xl font-bold mt-4'>Shop</h1>
@@ -80,7 +80,321 @@ function Shop() {
         </div>
 
         <div>
-          <Secpart/>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 bg-white ps-20 pe-20'>
+            <div className='button'>
+              <a href="#" className='burdges relative inline-block'>
+                <img src={Product20} alt="" />
+                <img className='Burges' src={Product1} alt="" />
+                <div className='icon'>
+                  <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                  <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                  <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                  <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                </div>
+              </a>
+              <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Bradley Burgess 2</h6>
+              <h2 className='font-bold'>$20.00</h2>
+              <div className='btn mt-6 mb-6'>
+                <div className='flex gap-[2px] items-center'>
+                  <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                </div>
+                <div className='flex items-center'>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                  <span className='text-xs'>(81)</span>
+                </div>
+
+              </div>
+            </div>
+            <div className='button'>
+              <a href="#" className='burdges relative inline-block'>
+                <img src={Product2} alt="" />
+                <img className='Burges' src={Product11} alt="" />
+                <div className='icon'>
+                  <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                  <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                  <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                  <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                </div>
+              </a>
+              <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Allie Sharp</h6>
+              <h2 className='font-bold'>$30.00</h2>
+
+              <div className='btn mt-6 mb-6'>
+                <div className='flex gap-[2px]'>
+                  <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                </div>
+                <div className='flex items-center'>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                  <span className='text-xs'>(81)</span>
+                </div>
+              </div>
+            </div>
+            <div className='button'>
+              <a href="#" className='burdges relative inline-block'>
+                <img src={Product3} alt="" />
+                <img className='Burges' src={Product12} alt="" />
+                <div className='icon'>
+                  <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                  <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                  <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                  <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                </div>
+              </a>
+              <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Nathaniel Baldwin</h6>
+              <h2 className='font-bold'>$40.00</h2>
+              <div className='btn mt-6 mb-6'>
+                <div className='flex gap-[2px]'>
+                  <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                </div>
+                <div className='flex items-center'>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                  <span className='text-xs'>(81)</span>
+                </div>
+              </div>
+            </div>
+            <div className='button'>
+              <a href="#" className='burdges relative inline-block'>
+                <img src={Product4} alt="" />
+                <img className='Burges' src={Product13} alt="" />
+                <div className='icon'>
+                  <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                  <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                  <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                  <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                </div>
+              </a>
+              <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Effie Rios</h6>
+              <h2 className='font-bold'>$40.00</h2>
+              <div className='btn mt-6 mb-6'>
+                <div className='flex gap-[2px]'>
+                  <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                </div>
+                <div className='flex items-center'>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                  <span className='text-xs'>(81)</span>
+                </div>
+              </div>
+            </div>
+            <div className='button'>
+
+              <a href="#" className='burdges relative inline-block'>
+                <img src={Product5} alt="" />
+                <img className='Burges' src={Product14} alt="" />
+                <div className='icon'>
+                  <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                  <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                  <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                  <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                </div>
+              </a>
+              <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Carolyn Goodwin</h6>
+              <h2 className='font-bold'>$50.00</h2>
+              <div className='btn mt-6 mb-6'>
+                <div className='flex gap-[2px]'>
+                  <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                </div>
+                <div className='flex items-center'>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                  <span className='text-xs'>(81)</span>
+                </div>
+              </div>
+            </div>
+
+            <div className='button'>
+              <a href="#" className='burdges relative inline-block'>
+                <img src={Product6} alt="" />
+                <img className='Burges' src={Product15} alt="" />
+                <div className='icon'>
+                  <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                  <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                  <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                  <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                </div>
+              </a>
+              <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Evelyn Patton</h6>
+              <h2 className='font-bold'>$60.00</h2>
+              <div className='btn mt-6 mb-6'>
+                <div className='flex gap-[2px]'>
+                  <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                </div>
+                <div className='flex items-center'>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                  <span className='text-xs'>(81)</span>
+                </div>
+              </div>
+            </div>
+            <div className='button'>
+              <a href="#" className='burdges relative inline-block'>
+                <img src={Product7} alt="" />
+                <img className='Burges' src={Product16} alt="" />
+                <div className='icon'>
+                  <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                  <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                  <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                  <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                </div>
+              </a>
+              <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Sally Ray</h6>
+              <h2 className='font-bold'>$70.00</h2>
+              <div className='btn mt-6 mb-6'>
+                <div className='flex gap-[2px]'>
+                  <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                </div>
+                <div className='flex items-center'>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                  <span className='text-xs'>(81)</span>
+                </div>
+              </div>
+            </div>
+            <div className='button'>
+              <a href="#" className='burdges relative inline-block'>
+
+                <img src={Product8} alt="" />
+                <img className='Burges' src={Product17} alt="" />
+                <div className='icon'>
+                  <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                  <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                  <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                  <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                </div>
+              </a>
+
+              <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Ora Bowman</h6>
+              <h2 className='font-bold'>$80.00</h2>
+              <div className='btn mt-6 mb-6'>
+                <div className='flex gap-[2px]'>
+                  <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                </div>
+                <div className='flex items-center'>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                  <span className='text-xs'>(81)</span>
+                </div>
+              </div>
+            </div>
+            <div className='button'>
+
+              <a href="#" className='burdges relative inline-block'>
+                <img src={Product9} alt="" />
+                <img className='Burges' src={Product18} alt="" />
+                <div className='icon'>
+                  <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                  <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                  <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                  <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                </div>
+              </a>
+              <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Frederick Valdez</h6>
+              <h2 className='font-bold'>$90.00</h2>
+              <div className='btn mt-6 mb-6'>
+                <div className='flex gap-[2px]'>
+                  <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                  <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                </div>
+                <div className='flex items-center'>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                  <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                  <span className='text-xs'>(81)</span>
+                </div>
+              </div>
+
+            </div>
+            <div className='button'>
+              <div className=''>
+                <a href="#" className='burdges relative inline-block'>
+                  <img src={Product10} alt="" />
+                  <img className='Burges' src={Product19} alt="" />
+                  <div className='icon'>
+                    <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+                    <a href="#"><span className="material-symbols-outlined">sync_alt</span></a>
+                    <a href="#"><span className="material-symbols-outlined">visibility</span></a>
+                    <a href="#"><span className="material-symbols-outlined">favorite</span></a>
+                  </div>
+                </a>
+
+                <h6 className='pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer'>Terry Byrd</h6>
+                <h2 className='font-bold'>$100.00</h2>
+                <div className='btn mt-6 mb-6'>
+                  <div className='flex gap-[2px]'>
+                    <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
+                    <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>
+                    <button className='rounded-full h-[10px] w-[10px] bg-orange-500'></button>
+                    <button className='rounded-full h-[10px] w-[10px] bg-indigo-500'></button>
+                  </div>
+                  <div className='flex items-center'>
+                    <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                    <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                    <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                    <button><i class="fa-solid fa-star text-xs text-rose-600"></i></button>
+                    <button><i class="fa-regular fa-star text-xs text-rose-600"></i></button>
+                    <span className='text-xs'>(81)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
         </div>
       </div>
     </div>

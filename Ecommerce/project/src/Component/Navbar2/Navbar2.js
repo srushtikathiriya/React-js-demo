@@ -46,7 +46,7 @@ function Asidebar() {
                                   <li><Link to="/shoplocation" >Shop Location</Link></li>
                                   <li><Link to="/cart">Cart</Link> </li>
                                   <li> <Link to="/signin">Sign In</Link> </li>
-                                  <li> <a href="#">Checkout</a> </li>
+                                  <li><Link to="/checkout">Checkout</Link> </li>
                                   <li> <Link to="/wishlist">Wishlist</Link> </li>
                                   <li> <Link to="/producttract">Product Track</Link> </li>
                                   {/* <li>  <Link to="*">404 / Error</Link> </li> */}
@@ -65,7 +65,7 @@ function Asidebar() {
                                   <ul className='w-[15rem] my-3'>
                                     <li className='ml-4 mb-3 text-sm font-bold'> <h1 className='hover:text-red-500'>PAGE LAYOUT</h1> </li>
                                     <li> <Link to="/shop">Shop Filters V1</Link> </li>
-                                    <li>  <Link to="/shop">Shop Filters V1</Link> </li>
+                                    <li>  <Link to="/shop">Shop Filters V2</Link> </li>
                                     <li> <a href="#">Shop Sidebar</a> </li>
                                     <li> <a href="#">Shop Right Sidebar</a> </li>
                                     <li> <a href="#">Shop List View</a> </li>
@@ -75,7 +75,7 @@ function Asidebar() {
                                     <li className='ml-4 mb-3 text-sm font-bold'> <h1 className='hover:text-red-500'>PAGE LAYOUT</h1> </li>
                                     <li><Link to="/about">About</Link></li>
                                     <li><Link to="/cart">Cart</Link> </li>
-                                    <li> <a href="#">Checkout</a> </li>
+                                    <li><Link to="/checkout">Checkout</Link> </li>
                                     <li> <Link to="/signin">Sign In</Link> </li>
                                     <li> <Link to="/login">Log In</Link> </li>
                                   </ul>

@@ -17,7 +17,7 @@ function Blogdetails() {
     };
 
     return (
-        <div className='relative flex justify-center'>
+        <div className=' flex justify-center'>
             <div className="w-[900px] flex flex-col items-center">
                 <div className='relative'>
                     <img src={Breadcrumb} alt="" className='h-[200px]' />
