@@ -4,7 +4,7 @@ import Logo from "../Asset/Logo.png"
 function Navbar() {
   return (
     <div>
-      <div className="w-[900px] bg-gradient-to-r from-purple-500 to-pink-500 flex font-bold justify-between items-center text-white p-5 m-auto rounded-md">
+      <div className=" bg-gradient-to-r from-purple-500 to-pink-500 flex font-bold justify-between items-center text-white p-5 m-auto rounded-md">
         <img src={Logo} alt=""/>
         <ul className="flex gap-10">
             <li> <Link to="/"> Home</Link></li>
@@ -12,6 +12,7 @@ function Navbar() {
             <li><Link to="/blog">Blog</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/help">Help</Link></li>
+            {/* <li><Link to="*">Error 404!</Link></li> */}
         </ul>
       </div>
     </div>

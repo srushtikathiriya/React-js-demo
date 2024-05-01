@@ -1,0 +1,71 @@
+/* .title-shape span img{
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    z-index: -1;
+    animation-duration: 2s;
+    transition: all .3s ease-out 0s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: section-animation;
+    animation-timeline: auto;
+    animation-range-start: normal;
+} */
+
+.container2{
+    padding-inline: 70px;
+}
+.Burges{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.burdges:hover img{
+    opacity:1;
+}
+.icon{
+    display: flex;
+    position: absolute;
+    top:40%;
+    left: 20%;
+    opacity: 0;
+    gap: 20px;
+    padding-inline: 10px;
+    padding-top: 7px;
+    background-color: white;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+.burdges:hover .icon{
+    opacity: 1;
+}
+.icon a span{
+    font-size: 20px;
+}
+.icon a{
+    font-size: 15px;
+    color: rgb(222, 219, 219);
+}
+
+.icon a:hover{
+    color: rgb(25, 25, 25);
+}
+.button .btn{
+    position: relative;
+    opacity: 0;
+    background-color: white;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button:hover .btn{
+    opacity: 1;
+}

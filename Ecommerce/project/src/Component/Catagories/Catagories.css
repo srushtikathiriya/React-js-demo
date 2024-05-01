@@ -1,0 +1,156 @@
+.asid-wrapper {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    /* background-color: #fff; */
+    position: relative;
+    box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    /* top: 0%; */
+    /* left: 5%; */
+    margin: auto;
+    /* max-width: 200px; */
+    width: 100%;
+    height: 100%;
+    /* padding: 0px 0px 5px 0px; */
+    /* overflow: hidden; */
+}
+
+/* **************************/
+
+aside {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+/***********************aside logo*******************/
+
+
+aside .aside-logo button{
+    /* overflow: hidden; */
+    background-color: #d51243;
+    z-index: 5;
+    top: 0%;
+    left: 0%;
+    margin: auto;
+    padding: 15px 20px 10px 0px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+aside .aside-logo .logo-text {
+    padding: 0% 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+
+
+/*************************** aside-buttons***************/
+
+aside .sidebar {
+    background-color: rgb(252, 252, 252);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* gap: 0.1rem; */
+}
+
+aside h3 {
+    font-weight: 400;
+    color: black;
+}
+
+aside .sidebar a,
+h3 {
+    font-size: 1rem;
+    /* font-weight: 600; */
+}
+
+aside .sidebar span{
+    font-size: 20px;
+}
+
+aside .sidebar a {
+    color: #d51243;
+    display: flex;
+    margin-left: 1rem;
+    gap: 1rem;
+    align-items: center;
+    height: 2.7rem;
+}
+
+aside h3:hover {
+    color: #d51243;
+    transition: all .2s ease-out 0s;
+}
+
+.aside-footer a {
+    gap: 0.1rem;
+}
+
+.aside-footer a span{
+    font-size: 15px;
+}
+
+.aside-footer .value,
+.aside-footer .offer,
+.aside-footer .arrivels {
+    color: black;
+    font-weight: 600;
+}
+
+/* .aside-footer .value span:hover,
+.aside-footer .offer span:hover {
+    text-decoration: underline;
+    color: #d51243;
+} */
+
+.asid-wrapper ul li a span{
+    background-image: linear-gradient(#d51243, #d51243), linear-gradient(#d51243, #d51243);
+    display: inline;
+    background-size: 0 1px, 0 1px;
+    background-position: 100% 100%, 0 90%;
+    background-repeat: no-repeat;
+    transition: background-size .4s linear;
+    transition: all .3s ease-out 0s;
+    font-size: 14px;
+    font-weight: 600;
+}
+.dropbtn2 {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 1px;
+}
+
+.dropbtn2:hover{
+    color: #d51243; 
+}
+
+/* .dropdown-content1{
+    border-top: 2px solid #d51243;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+} */
+
+.dropdown-content1 a {
+    color: black;
+    padding: 7px 15px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown:hover .dropdown-content, .dropdown1:hover .dropdown-content1{
+    display: block;
+}
+
+.dropdown-content a:hover, .dropdown-content1 a:hover{
+    color: #d51243;
+}

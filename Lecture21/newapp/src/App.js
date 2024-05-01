@@ -7,6 +7,7 @@ import Blog from "./Use-Router/Blog/Blog";
 import Contact from "./Use-Router/Contact/Contact";
 import Help from "./Use-Router/Help/Help";
 import Navbar from "./Use-Router/Navbar/Navbar"
+import Error from './Use-Router/Error/Error';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
               <Route path="/blog" element={<Blog/>}/>
               <Route path="/contact" element={<Contact/>}/>
               <Route path="/help" element={<Help/>}/>
+              <Route path="*" element={<Error/>}/>
             </Routes>
       </BrowserRouter>
       
