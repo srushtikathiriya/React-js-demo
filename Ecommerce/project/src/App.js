@@ -28,6 +28,7 @@ import Signin from "./Pages/page/Signin/Signin";
 import Login from "./Pages/page/Login/Login";
 import Woodenhome from "./Pages/Home/Woodenhome/Woodenhome";
 import Shoplocation from "./Pages/Shop/Shoplocation/Shoplocation";
+import Carticon from "./Component/Carticon/Carticon";
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
         <Navbar />
         <Navbar2 />
         <Routes>
+        {/* <Route path="/carticon" element={<Carticon/>} /> */}
+
+
           <Route path="/" element={<Home/>} />
           <Route path="/" element={<Woodenhome/>} />
 

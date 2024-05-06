@@ -22,22 +22,26 @@ function Checkout() {
             <div className='relative'>
                 <img src={Breadcrumb} alt="" className='h-[200px]' />
                 <div className='absolute top-14 left-20'>
-                    <button onClick={backToHome}>Home</button>
-                    <i className="fa-solid fa-minus ps-3 pe-3"></i>
-                    <span className='text-slate-400'>Checkout</span>
+                    <div className='flex'>
+                        <button onClick={backToHome}>Home</button>
+                        <div className='ms-3 me-3 mt-3'>
+                            <div className='w-[3vw] border-b-2 border-[#e2e2e2]'></div>
+                        </div>
+                        <span className='text-slate-400'>Checkout</span>
+                    </div>
                     <h1 className='text-4xl font-bold mt-4'>Checkout</h1>
                 </div>
             </div>
 
             <div className='p-20'>
-            <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-8'>
+                <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-8'>
                     <div className='bg-stone-200 p-3 border-t-4 border-rose-300 w-full'>
                         <span className='text-black text-sm flex items-center '><FaFolder className='text-gray-500 ms-3 me-3' />Returning customer? <a href='#' className='text-gray-400 hover:text-black'> Click here to login</a></span>
                     </div>
                     <div className='bg-stone-200 p-3 border-t-4 border-rose-300 w-full'>
                         <span className='text-black text-sm flex items-center'><FaFolder className='text-gray-500 ms-3 me-3' />Have a coupon? <a href='#' className='text-gray-400 hover:text-black'>Click here to enter your code</a></span>
                     </div>
-            </div>
+                </div>
             </div>
             <div className='ps-20 pe-20'>
                 <div className='grid sm:grid-cols-1 xl:grid-cols-2 gap-8'>

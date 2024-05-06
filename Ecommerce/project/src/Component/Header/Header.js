@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 import Banners1 from "../Asset/banner-1.jpg"
 import Banners2 from "../Asset/banner-2.jpg"
@@ -29,11 +29,8 @@ function Header() {
                                 delay: 2500,
                                 disableOnInteraction: false,
                             }}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            navigation={true}
-                            modules={[Autoplay, Pagination, Navigation]}
+
+                            modules={[Autoplay]}
                             className="mySwiper">
                             <SwiperSlide>
                                 <div className="card relative ">

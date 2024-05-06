@@ -2,7 +2,7 @@ import React from 'react'
 import Style  from "../Navbar/Navbar.css"
 import Logo from "../Asset/Logo.png"
 import Langflag from "../Asset/lang-flag.png"
-
+import {Link} from "react-router-dom";
 function Navbar() {
   return (
     <div>
@@ -68,10 +68,12 @@ function Navbar() {
                                 {/* <div className=''> */}
                                     <ul className='flex p-2 text-gray-600 gap-7 relative'>
                                         <li className='relative'>
-                                            <a href="#" ><i class="fa-solid fa-cart-shopping fa-lg"></i><span className='absolute top-[-30%] right-[-20%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>0</span></a></li>
+                                            {/* <a href="#" ><i class="fa-solid fa-cart-shopping fa-lg"></i><span className='absolute top-[-30%] right-[-20%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>0</span></a></li> */}
+                                            <Link to="/carticon"><i class="fa-solid fa-cart-shopping fa-lg"></i><span className='absolute top-[-30%] right-[-20%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>0</span></Link>
+                                            </li>
                                             
                                         <li><a href="#"><i class="fa-regular fa-user fa-lg"></i></a></li>
-                                        <li><a href="#"><i class="fa-regular fa-heart fa-lg" ></i><span className='absolute top-[5%] right-[1%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>0</span></a></li>
+                                        <li><Link to="/wishlist"><i class="fa-regular fa-heart fa-lg" ></i><span className='absolute top-[5%] right-[1%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>0</span></Link></li>
                                     </ul>
                                 {/* </div> */}
                             </div>

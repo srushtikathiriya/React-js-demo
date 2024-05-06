@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import {Autoplay, Pagination } from 'swiper/modules';
+import {Autoplay } from 'swiper/modules';
 import "../LastPart/Lastpart.css"
 import Instagram1 from "../Asset/instagram-01.jpg"
 import Instagram2 from "../Asset/instagram-02.jpg"
@@ -30,9 +30,9 @@ function Lastpart() {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         breakpoints={{
           576: {
             slidesPerView: 2,
@@ -47,7 +47,7 @@ function Lastpart() {
             slidesPerView: 5,
           },
         }}
-        modules={[Autoplay,Pagination]}
+        modules={[Autoplay]}
         className="mySwipers"
         >
         <SwiperSlide>

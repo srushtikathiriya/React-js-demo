@@ -19,9 +19,13 @@ function Producttract() {
                 <div className='relative'>
                     <img src={Breadcrumb} alt="" className='h-[200px]' />
                     <div className='absolute top-14 left-20 breadcrumb-item-active'>
-                        <button onClick={backToHome}>Home</button>
-                        <i class="fa-solid fa-minus ps-3 pe-3"></i>
-                        <span className='text-slate-400'>Track</span>
+                        <div className='flex'>
+                            <button onClick={backToHome}>Home</button>
+                            <div className='ms-3 me-3 mt-3'>
+                                <div className='w-[3vw] border-b-2 border-[#e2e2e2]'></div>
+                            </div>
+                            <span className='text-slate-400'>Track</span>
+                        </div>
                         <h1 className='text-4xl font-bold mt-4'>Track</h1>
                     </div>
                 </div>
@@ -43,15 +47,15 @@ function Producttract() {
                             </div>
                             <div className='relative'>
                                 <div className=''>
-                                    <span><FaAddressCard className='relative top-11 left-10  text-xl'/></span>
+                                    <span><FaAddressCard className='relative top-11 left-10  text-xl' /></span>
                                     <input placeholder='Order ID' className="w-full mt-1 pl-20 p-4 rounded-lg" />
                                 </div>
                                 <div className=''>
-                                    <span><MdOutlineMail  className='relative top-10 left-10  text-xl'/></span>
+                                    <span><MdOutlineMail className='relative top-10 left-10  text-xl' /></span>
                                     <input placeholder='Billing email' className="w-full pl-20 p-4 rounded-lg" />
                                 </div>
                             </div>
-                            <button className='w-full bg-rose-600 text-white font-bold justify-center mt-3 flex items-center p-4 rounded-lg text-center gap-4'>Track Now<FaArrowRightLong className=''/></button>
+                            <button className='w-full bg-rose-600 text-white font-bold justify-center mt-3 flex items-center p-4 rounded-lg text-center gap-4'>Track Now<FaArrowRightLong className='' /></button>
                         </div>
                     </div>
                 </div>

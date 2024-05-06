@@ -15,9 +15,13 @@ function Cart() {
         <div className='relative'>
           <img src={Breadcrumb} alt="" className='h-[200px]' />
           <div className='absolute top-14 left-20'>
+            <div className='flex'>
             <button onClick={backToHome}>Home</button>
-            <i className="fa-solid fa-minus ps-3 pe-3"></i>
+            <div className='ms-3 me-3 mt-3'>
+                <div className='w-[3vw] border-b-2 border-[#e2e2e2]'></div>
+            </div>
             <span className='text-slate-400'>Cart</span>
+            </div>
             <h1 className='text-4xl font-bold mt-4'>Cart</h1>
           </div>
         </div>
