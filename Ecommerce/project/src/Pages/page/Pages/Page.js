@@ -15,6 +15,7 @@ import Aboutbanner1 from "../../Asset/about-banner-1.jpg"
 import Aboutbanner2 from "../../Asset/about-banner-2.jpg"
 import "../Pages/Page.css"
 import { useNavigate } from 'react-router-dom'
+import Propsheading from '../../Propsheading/Propsheading';
 
 function Page() {
 
@@ -26,20 +27,8 @@ function Page() {
   return (
     <div>
       <div>
-        <div className='relative'>
-          <img src={Breadcrumb} alt="" className='h-[200px]' />
-          <div className='absolute top-14 left-20 breadcrumb-item-active'>
-            <div className='flex'>
-            <button onClick={backToHome}>Home</button>
-            <div className='ms-3 me-3 mt-3'>
-                <div className='w-[3vw] border-b-2 border-[#e2e2e2]'></div>
-            </div>
-            <span className='text-slate-400'>About Us</span>
-            </div>
+      <Propsheading title="About"/>
 
-            <h1 className='text-4xl font-bold mt-4'>About Us</h1>
-          </div>
-        </div>
 
         <div className='container-4'>
           <div className='grid grid-col-1'>

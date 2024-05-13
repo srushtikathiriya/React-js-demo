@@ -36,14 +36,14 @@ function Contact() {
         <div className='col-span-2'>
           <h1 className="font-bold text-2xl">Make Custom Request</h1>
           <h6 className="text-sm mt-2 text-stone-500">Must-have pieces selected every month want style Ideas and Treats?</h6>
-          <form action="" className="mt-8">
+          <form action="https://formspree.io/f/myyroqop" method="POST" className="mt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input type="text" placeholder="Full name" required className="border p-4 rounded-md" />
-              <input type="email" placeholder="Email address" required className="border p-4 rounded-md" />
-              <input type="tel" placeholder="Phone number" required className="border p-4 rounded-md" />
-              <input type="text" placeholder="Subject" required className="border p-4 rounded-md" />
+              <input type="text" name='name' placeholder="Full name" required className="border p-4 rounded-md" />
+              <input type="email" name='email' placeholder="Email address" required className="border p-4 rounded-md" />
+              <input type="tel" name='tel' placeholder="Phone number" required className="border p-4 rounded-md" />
+              <input type="text" name='text' placeholder="Subject" required className="border p-4 rounded-md" />
             </div>
-            <textarea name="" id="" cols="30" rows="5" required placeholder="Enter message" className="border p-4 rounded-md mt-6 w-full"></textarea>
+            <textarea  name="notes" id="" cols="30" rows="5" required placeholder="Enter message" className="border p-4 rounded-md mt-6 w-full"></textarea>
             <div className="mt-6">
               <button className="bg-rose-600 p-4  text-white font-semibold rounded-md w-40">
                 Get A Quote <i className="fa-solid fa-arrow-right ps-2"></i>

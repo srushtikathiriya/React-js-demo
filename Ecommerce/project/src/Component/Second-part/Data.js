@@ -1,57 +1,109 @@
-import c1 from '../assets/c1.svg'
-import c2 from '../assets/c2.svg'
-import c3 from '../assets/c3.svg'
-import c4 from '../assets/c4.svg'
-import c5 from '../assets/c5.svg'
-import c6 from '../assets/c6.svg'
-const Data = [
+
+import Product1 from '../Asset/product-1.jpg'
+import Product2 from '../Asset/product-2.jpg'
+import Product3 from  '../Asset/product-3.jpg'
+import Product4 from   '../Asset/product-4.jpg'
+import Product5 from   '../Asset/product-5.jpg'
+import Product6 from  '../Asset/product-6.jpg'
+import Product7 from  '../Asset/product-7.jpg'
+import Product8 from  '../Asset/product-8.jpg'
+import Product9 from  '../Asset/product-9.jpg'
+import Product10 from   '../Asset/product-10.jpg'
+
+import Product11 from   '../Asset/product-11.jpg'
+import Product12 from  '../Asset/product-12.jpg'
+import Product13 from  '../Asset/product-13.jpg'
+import Product14 from  '../Asset/product-14.jpg'
+import Product15 from   '../Asset/product-15.jpg'
+import Product16 from  '../Asset/product-16.jpg'
+import Product17 from  '../Asset/product-17.jpg'
+import Product18 from  '../Asset/product-18.jpg'
+import Product19 from  '../Asset/product-19.jpg'
+import Product20 from   '../Asset/product-20.jpg'
+
+
+
+
+const ProductData = [
     {
-        id:"20",
-        fname :"Driftwood ",
-        lname:" Table Decor",
-        line : <p style={{height:"200px" , width:"1px" , backgroundColor:"#cbcccc"}} ></p>,
-        img : c1
-        
+        name: "Bradley Burgess 2",
+        price: "$20.00",
+        FirstImg:Product1,
+        SecondeImg: Product2,
+        id:"0",
     },
     {
-        id:"12",
-        fname :"Floor Driftwood  ",
-        lname:" Sculpture",
-        line : <p style={{height:"200px" , width:"1px" , backgroundColor:"#cbcccc"}} ></p>,
-        img : c2
+        name: "Allie Sharp",
+        price: "$30.00",
+        FirstImg: Product3,
+        SecondeImg: Product4,
+        id:"1",
+    },
+    {
+        name: "Nathaniel Baldwin",
+        price: "$40.00",
+        FirstImg: Product5,
+        SecondeImg: Product6,
+        id:"2",
 
     },
     {
-        id:"03",
-        fname :"Driftwood",
-        lname:" Christmas Tree ",
-        line : <p style={{height:"200px" , width:"0.5px" , backgroundColor:"#cbcccc"}} ></p>,
-        img : c3
+        name: "Effie Rios",
+        price: "$40.00",
+        FirstImg: Product7,
+        SecondeImg: Product8,
+        id:"3",
 
     },
     {
-        id:"09",
-        fname :" Wooden ",
-        lname:" Bluetooth Speaker ",
-        line : <p style={{height:"200px" , width:"1px" , backgroundColor:"#cbcccc"}} ></p>,
-        img : c4
+        name: "Carolyn Goodwin",
+        price: "$50.00",
+        FirstImg: Product9,
+        SecondeImg: Product10,
+        id:"4",
 
     },
     {
-        id:"10",
-        fname :"Receivers ",
-        lname:"Amplifiers",
-        line : <p style={{height:"200px" , width:"1px" , backgroundColor:"#cbcccc"}} ></p>,
-        img : c5
+        name: "Evelyn Patton",
+        price: "$60.00",
+        FirstImg: Product11,
+        SecondeImg: Product12,
+        id:"5",
 
     },
     {
-        id:"05",
-        fname :"Appetizer",
-        lname:" Plate Set ",
-        img : c6
-    }
+        name: "Sally Ray",
+        price: "$70.00",
+        FirstImg: Product13,
+        SecondeImg: Product14,
+        id:"6",
 
+    },
+    {
+        name: "Ora Bowman",
+        price: "$80.00",
+        FirstImg: Product15,
+        SecondeImg: Product16,
+        id:"7",
+
+    },
+    {
+        name: "Effie Rios",
+        price: "$90.00",
+        FirstImg: Product17,
+        SecondeImg: Product18,
+        id:"8",
+
+    },
+    {
+        name: "Terry Byrd",
+        price: "$100.00",
+        FirstImg: Product19,
+        SecondeImg: Product20,
+        id:"9",
+
+    },
+    
 ]
 
-export default Data;
+export default ProductData

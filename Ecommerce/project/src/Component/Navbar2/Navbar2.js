@@ -41,7 +41,7 @@ function Asidebar() {
                                 <ul className='w-[15rem] my-3'>
                                   <li><Link to="/shop" >Shop</Link></li>
                                   <li><Link to="/shop2" >Shop 2</Link> </li>
-                                  <li> <a href="#">Shop Details</a> </li>
+                                  <li> <Link to="/shopdetails">Shop Details</Link> </li>
                                   <li> <a href="#">Shop Details 2</a> </li>
                                   <li><Link to="/shoplocation" >Shop Location</Link></li>
                                   <li><Link to="/cart">Cart</Link> </li>

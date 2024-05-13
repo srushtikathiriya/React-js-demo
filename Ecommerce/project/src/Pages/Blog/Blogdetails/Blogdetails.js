@@ -16,40 +16,28 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
 import { FaReplyAll } from "react-icons/fa";
+import Propsheading from '../../Propsheading/Propsheading';
 
 
 function Blog() {
 
   const navigate = useNavigate();
-  const Navigate = useNavigate();
+  // const Navigate = useNavigate();
   const backToHome = () => {
     navigate("/");
   };
   // const backToBlogdetails = () => {
   //   Navigate("/blogdetail");
   // };
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // };
 
 
   return (
     <div className=''>
       <div>
-        <div className='relative'>
-          <img src={Breadcrumb} alt="" className='h-[200px]' />
-          <div className='absolute top-14 left-20 breadcrumb-item-active'>
-            <div className='flex'>
-              <button onClick={backToHome}>Home</button>
-              <div className='ms-3 me-3 mt-3'>
-                <div className='w-[3vw] border-b-2 border-[#e2e2e2]'></div>
-              </div>
-              <span className='text-slate-400'>Blog Details</span>
-            </div>
-            <h1 className='text-4xl font-bold mt-4'>Blog Details</h1>
-          </div>
-        </div>
-
+        <Propsheading title="Blogdetails"/>
         <div className='containers-3 mx-auto p-4 md:p-0 md:px-8'>
 
           <div className='grid grid-cols-4 md:grid-cols-6 md:flex-nowrap sm:flex-wrap gap-20'>
@@ -132,7 +120,7 @@ function Blog() {
                       <h1 className='font-semibold'>Kristin Watson</h1>
                       <h5 className='mt-3 text-sm text-[#777]'>MARCH 10, 2020</h5>
                       <p className='mt-3 text-md text-[#777]'>Patient Comments are a collection of comments submitted by viewers in response to a question posed by a MedicineNet doctor.</p>
-                      <button className='ms-5 mt-5 text-rose-600 hover:bg-rose-600  hover:text-white pt-2 pb-2 ps-3 pe-3 rounded-md' onClick={scrollToTop}><FaReplyAll /></button>
+                      <button className='ms-5 mt-5 text-rose-600 hover:bg-rose-600  hover:text-white pt-2 pb-2 ps-3 pe-3 rounded-md'><FaReplyAll /></button>
                     </div>
                   </div>
 
@@ -142,7 +130,7 @@ function Blog() {
                       <h1 className='font-semibold'>Brooklyn Simmons</h1>
                       <h5 className='mt-3 text-sm text-[#777]'>MARCH 10, 2020</h5>
                       <p className='mt-3 text-md text-[#777]'>Include anecdotal examples of your experience, or things you took notice of that you <br />feel others would find useful.</p>
-                      <button className='ms-5 mt-5 text-rose-600 hover:bg-rose-600  hover:text-white pt-2 pb-2 ps-3 pe-3 rounded-md' onClick={scrollToTop}><FaReplyAll /></button>
+                      <button className='ms-5 mt-5 text-rose-600 hover:bg-rose-600  hover:text-white pt-2 pb-2 ps-3 pe-3 rounded-md'><FaReplyAll /></button>
                     </div>
                   </div>
 
@@ -168,8 +156,6 @@ function Blog() {
                       </div>
                     </form>
                   </div>
-
-
                 </div>
               </div>
 

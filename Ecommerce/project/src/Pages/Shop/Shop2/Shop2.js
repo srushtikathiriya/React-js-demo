@@ -25,6 +25,7 @@ import Product19 from "../../Asset/product-20.jpg"
 import Product20 from "../../Asset/product-1.jpg"
 import { TfiMenuAlt } from "react-icons/tfi";
 import { BsGrid3X3 } from "react-icons/bs";
+import Propsheading from '../../Propsheading/Propsheading'
 
 // import Titleshape from "../Asset/title-shape-01.jpg"
 
@@ -40,19 +41,8 @@ function Shop2() {
             <div className=''>
                 <div className='relative'>
                     <div>
-                        <div>
-                            <img src={Breadcrumb} alt="" className='h-[200px]' />
-                            <div className='absolute top-14 left-20 breadcrumb-item-active'>
-                                <div className='flex'>
-                                    <button onClick={backToHome}>Home</button>
-                                    <div className='ms-3 me-3 mt-3'>
-                                        <div className='w-[3vw] border-b-2 border-[#e2e2e2]'></div>
-                                    </div>
-                                    <span className='text-slate-400'>Shop</span>
-                                </div>
-                                <h1 className='text-4xl font-bold mt-4'>Shop</h1>
-                            </div>
-                        </div>
+                        <Propsheading title="Shop"/>
+                    
                         <div>
 
                             <div className='flex p-20 relative'>

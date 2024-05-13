@@ -1,30 +1,18 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Breadcrumb from '../../Asset/breadcrumb-01.jpg';
+import Propsheading from '../../Propsheading/Propsheading';
+import ProductData from '../../../Component/Second-part/Data';
+import { useSelector } from 'react-redux';
+
 
 function Cart() {
-  const navigate = useNavigate();
-
-  const backToHome = () => {
-    navigate("/");
-  }
-
+  const data = useSelector((state)=>state.cartreducer.carts)
+  console.log(data);
   return (
     <div>
       <div className=''>
-        <div className='relative'>
-          <img src={Breadcrumb} alt="" className='h-[200px]' />
-          <div className='absolute top-14 left-20'>
-            <div className='flex'>
-            <button onClick={backToHome}>Home</button>
-            <div className='ms-3 me-3 mt-3'>
-                <div className='w-[3vw] border-b-2 border-[#e2e2e2]'></div>
-            </div>
-            <span className='text-slate-400'>Cart</span>
-            </div>
-            <h1 className='text-4xl font-bold mt-4'>Cart</h1>
-          </div>
-        </div>
+        <Propsheading title="Cart" />
 
         <div>
           <div className='p-20'>
@@ -40,16 +28,37 @@ function Cart() {
                   <th className='border'>Remove</th>
                 </tr>
               </thead>
+              <tbody>
+              {data.length ? 
+              data.map((product, index) => {
+                const {FirstImg , price,name ,id} = product.value;
+                <tr key={id}>
+                  <td className='border'>
+                    <div className='flex justify-center'>
+                      <img src={FirstImg} className='w-[150px] h-[180px]' />
+                    </div>
+                 </td>
+                  <td className='border'><a href='#' className='hover:text-rose-600 font-semibold'>{name}</a></td>
+                  <td className='border'>{ price}</td>
+                  <td className='border'><input min="1" type="number" defaultValue="1" name="qty" className="border p-3 font-bold"
+                  /></td>
+                  <td className='border'>{price}</td>
+                  <td className='border'><button className='bg-rose-600 text-white text-xs ps-5 pe-5 pt-3 pb-3 rounded-md font-bold'>Add To Cart</button></td>
+                  <td className='border'><button>Remove</button></td>
+                </tr>
+})
+: <h1 className='font-bold text-2xl'>Cart is empty....!</h1>}
+              </tbody>
               {/* You might need to add rows for each item in the cart */}
             </table>
             <div className='grid grid-cols-1 grid-rows-1 gap-2 mt-10'>
-                <div className='grid grid-rows-1 '>
-              <div className='flex justify-between'>
-                <div className='flex gap-2'>
-                  <input type="text" placeholder='Coupon Code' className='border p-2 rounded-lg' />
-                  <button className='bg-rose-600 rounded-lg text-white text-sm font-bold pt-3 pb-3 ps-5 pe-5'>Apply Coupon</button>
-                </div>
-                <button className='bg-rose-600 rounded-lg text-white block text-sm font-bold pt-3 pb-3 ps-7 pe-7'>Update Cart</button>
+              <div className='grid grid-rows-1 '>
+                <div className='flex justify-between'>
+                  <div className='flex gap-2'>
+                    <input type="text" placeholder='Coupon Code' className='border p-2 rounded-lg' />
+                    <button className='bg-rose-600 rounded-lg text-white text-sm font-bold pt-3 pb-3 ps-5 pe-5'>Apply Coupon</button>
+                  </div>
+                  <button className='bg-rose-600 rounded-lg text-white block text-sm font-bold pt-3 pb-3 ps-7 pe-7'>Update Cart</button>
                 </div>
               </div>
               <div className='grid-cols-1 grid-rows-1 grid '>

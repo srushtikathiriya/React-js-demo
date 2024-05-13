@@ -3,7 +3,19 @@ import Style  from "../Navbar/Navbar.css"
 import Logo from "../Asset/Logo.png"
 import Langflag from "../Asset/lang-flag.png"
 import {Link} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+ 
+//get data using redux store
+import { useSelector } from 'react-redux';
+
 function Navbar() {
+
+    const data = useSelector((state)=>state.cartreducer.carts)
+    console.log(data,"data");
+    const naviGetSignIn = useNavigate();
+    const naviGetWishlist = useNavigate();
+
+
   return (
     <div>
       <div className='containers'>
@@ -69,10 +81,13 @@ function Navbar() {
                                     <ul className='flex p-2 text-gray-600 gap-7 relative'>
                                         <li className='relative'>
                                             {/* <a href="#" ><i class="fa-solid fa-cart-shopping fa-lg"></i><span className='absolute top-[-30%] right-[-20%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>0</span></a></li> */}
-                                            <Link to="/carticon"><i class="fa-solid fa-cart-shopping fa-lg"></i><span className='absolute top-[-30%] right-[-20%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>0</span></Link>
+                                            <Link to="/cart">  
+                                            <button><i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                            <span className='absolute top-[-30%] right-[-20%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>{data.length}</span></button>
+                                            </Link>
                                             </li>
                                             
-                                        <li><a href="#"><i class="fa-regular fa-user fa-lg"></i></a></li>
+                                        <li><Link to="/signin"><i class="fa-regular fa-user fa-lg"></i></Link></li>
                                         <li><Link to="/wishlist"><i class="fa-regular fa-heart fa-lg" ></i><span className='absolute top-[5%] right-[1%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>0</span></Link></li>
                                     </ul>
                                 {/* </div> */}

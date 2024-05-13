@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Greeting/>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <div style={{ display: "flex", justifyContent: "space-evenly"}}>
         <Cardprops name="Keiji akira" course="Full Stack Developer" descr="The lorem text the section contain contains header having open andclose functionality." img={Img1} button="View More" />
         <Cardprops name="Cid Sirius" course="Mern Stack Developer" descr="The lorem text the section contain contains header having open andclose functionality." img={Img4} button="View More" />
         <Cardprops name="Rubber Soul" course="UI - UX" descr="The lorem text the section contain contains header having open andclose functionality." img={Img3} button="View More" />

@@ -4,14 +4,10 @@ import Breadcrumb from '../../Asset/breadcrumb-01.jpg';
 import { FaFolder } from "react-icons/fa";
 import { GoDash } from "react-icons/go";
 import { FaPlus } from "react-icons/fa6";
+import Propsheading from '../../Propsheading/Propsheading';
 
 function Checkout() {
     const navigate = useNavigate();
-    const navigates = useNavigate();
-
-    const backToHome = () => {
-        navigate("/");
-    }
 
     const backToCheckout = () => {
         navigate("/checkout");
@@ -19,19 +15,8 @@ function Checkout() {
 
     return (
         <div>
-            <div className='relative'>
-                <img src={Breadcrumb} alt="" className='h-[200px]' />
-                <div className='absolute top-14 left-20'>
-                    <div className='flex'>
-                        <button onClick={backToHome}>Home</button>
-                        <div className='ms-3 me-3 mt-3'>
-                            <div className='w-[3vw] border-b-2 border-[#e2e2e2]'></div>
-                        </div>
-                        <span className='text-slate-400'>Checkout</span>
-                    </div>
-                    <h1 className='text-4xl font-bold mt-4'>Checkout</h1>
-                </div>
-            </div>
+        <Propsheading title="Checkout"/>
+
 
             <div className='p-20'>
                 <div className='grid md:grid-cols-1 lg:grid-cols-2 gap-8'>

@@ -11,12 +11,14 @@ import { IoKeyOutline } from 'react-icons/io5';
 import Signinbg from '../../Asset/sign-bg.jpg';
 import Signup from "../../Asset/sign-up.png"
 import Swal from 'sweetalert2'; 
+import Propsheading from '../../Propsheading/Propsheading';
 
 function Signin() {
   const navigate = useNavigate();
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
 
+  const data = [{email:email,password:password}]
 
   const getEmail = localStorage.getItem("Email");
   const getPassword = localStorage.getItem("Password")
@@ -27,7 +29,11 @@ function Signin() {
           alert("please fill all filde");
         }
         else{
-          alert("successfully register")
+          // alert("successfully register")
+          Swal.fire({
+            title: "successfully register",
+            icon: "success"
+          });
           localStorage.setItem("Email",email);
           localStorage.setItem("Password",password);
           // navigate("/")
@@ -59,19 +65,8 @@ function Signin() {
   return (
     <div className="">
       <div>
-      <div className='relative'>
-          <img src={Breadcrumb} alt="" className='h-[200px]' />
-          <div className='absolute top-14 left-20 breadcrumb-item-active'>
-            <div className='flex'>
-            <button onClick={backToHome}>Home</button>
-            <div className='ms-3 me-3 mt-3'>
-                <div className='w-[3vw] border-b-2 border-[#e2e2e2]'></div>
-            </div>
-            <span className='text-slate-400'>Sign In</span>
-            </div>
-            <h1 className='text-4xl font-bold mt-4'>Sign In</h1>
-          </div>
-        </div>
+      <Propsheading title="Sign In"/>
+
 
         <div className="flex flex-col md:flex-row gap-5 p-5">
 

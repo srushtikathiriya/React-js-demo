@@ -29,11 +29,19 @@ import Login from "./Pages/page/Login/Login";
 import Woodenhome from "./Pages/Home/Woodenhome/Woodenhome";
 import Shoplocation from "./Pages/Shop/Shoplocation/Shoplocation";
 import Carticon from "./Component/Carticon/Carticon";
+import Productdetails from "./Pages/Productdetails/Productdetails";
+import Shopdetails from "./Pages/Shop/Shopdetails/Shopdetails"
+
+
+//redux
+import {Provider} from "react-redux"
+import store from "./Store";
 
 
 function App() {
   return (    
     <div className="App">
+      <Provider store={store}>
 
       <BrowserRouter>
         <Nav />
@@ -48,6 +56,8 @@ function App() {
 
           <Route path="/shop" element={<Shop/>}/>
           <Route path="/shop2" element={<Shop2/>}/>
+          <Route path="/shopdetails" element={<Shopdetails/>}/>
+          <Route path="/productdetails/:id" element={<Productdetails/>}/>
           <Route path="/shoplocation" element={<Shoplocation/>}/>
 
           <Route path="/pages" element={<Page/>} />
@@ -69,6 +79,7 @@ function App() {
         </Routes>
       <Footer />
       </BrowserRouter>
+      </Provider>
       
     </div>
   );
