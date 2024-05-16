@@ -11,3 +11,17 @@ export const REMOVE = (id) => {
         payload:id
 }
 }
+
+export const WISHLIST_ADD = (item) => {
+    return{
+        type:"ADD_TO_WISHLIST",
+        payload:item
+}
+}
+
+export const WISHLIST_REMOVE = (id) => {
+    return{
+        type:"REMOVE_TO_WISHLIST",
+        payload:id
+}
+}

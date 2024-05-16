@@ -3,26 +3,20 @@ import '../Second-part/Secpart.css';
 import { Link } from 'react-router-dom';
 import ProductData from '../Second-part/Data';
 import {useDispatch} from "react-redux";
-import {ADD} from "../../Redux/Action/Action"
+import {ADD, WISHLIST_ADD} from "../../Redux/Action/Action"
 import Productdetails from '../../Pages/Productdetails/Productdetails';
 
 function Secpart() {
     const dispatch = useDispatch();
     const send = (e)=>{
-        console.log(e,"eeeee");
+        // console.log(e,"eeeee");
         dispatch(ADD(e));
     }
-    const [addedProducts, setAddedProducts] = useState([]);
-
-  const handleClick = (product) => {
-    if (addedProducts.includes(product)) {
-      alert('This product is already added!');
-    } else {
-      // Add the product to the list of added products
-      setAddedProducts([...addedProducts, product]);
-      // Add your logic to handle adding the product here
+    const wishlistsend = (e)=>{
+        // console.log(e,"eeeee");
+        dispatch(WISHLIST_ADD(e));
     }
-  };
+    
 
     return (
         <div className="container2 bg-stone-50">
@@ -61,24 +55,24 @@ function Secpart() {
                         </Link>
                             <div className="icon">
                                 <a href="#">
-                                    <button onClick={()=>send(Productdetails)}><i className="fa-solid fa-basket-shopping"></i></button>
+                                    <button onClick={()=>send(product)}><i className="fa-solid fa-basket-shopping"></i></button>
                                 </a>
                                 <a href="#">
-                                    <button><span className="material-symbols-outlined">sync_alt</span></button>
+                                    <button ><span className="material-symbols-outlined">sync_alt</span></button>
                                 </a>
                                 <a href="#">
                                    <button><span className="material-symbols-outlined">visibility</span></button> 
                                 </a>
                                 <a href="#">
-                                    <button><span className="material-symbols-outlined">favorite</span></button>
+                                    <button onClick={()=>wishlistsend(product)}><span className="material-symbols-outlined">favorite</span></button>
                                 </a>
                             </div>
                         <h6 className="pb-2 pt-2 text-slate-400 hover:text-rose-600 cursor-pointer">
                             {product.name}
                         </h6>
                         <h2 className="font-bold">{product.price}</h2>
-                        <div className="btn mt-6 mb-6">
-                            <div className="flex  items-center">
+                        <div className="btn mt-6 mb-6 my-auto">
+                            <div className="flex justify-between items-center">
                                 <div className='flex gap-[2px]'>
                                     <button className='rounded-full h-[10px] w-[10px] bg-sky-500'></button>
                                     <button className='rounded-full h-[10px] w-[10px] bg-rose-500'></button>

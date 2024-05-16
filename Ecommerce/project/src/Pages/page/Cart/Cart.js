@@ -3,12 +3,21 @@ import { useNavigate } from 'react-router-dom';
 import Breadcrumb from '../../Asset/breadcrumb-01.jpg';
 import Propsheading from '../../Propsheading/Propsheading';
 import ProductData from '../../../Component/Second-part/Data';
-import { useSelector } from 'react-redux';
+import { useSelector ,useDispatch } from 'react-redux';
+import {REMOVE,ADD} from "../../../Redux/Action/Action";
 
 
 function Cart() {
   const data = useSelector((state)=>state.cartreducer.carts)
-  console.log(data);
+  // console.log(data);
+
+  const dispatch = useDispatch();
+  const  remove = (id) => {
+    // console.log("id",id);
+    dispatch(REMOVE(id));
+  };
+
+
   return (
     <div>
       <div className=''>
@@ -24,36 +33,39 @@ function Cart() {
                   <th className='border'>Unit Price</th>
                   <th className='border'>Quantity</th>
                   <th className='border'>Total</th>
-                  <th className='border'>Add To Cart</th>
                   <th className='border'>Remove</th>
                 </tr>
               </thead>
               <tbody>
-              {data.length ? 
+            {data.length ? 
               data.map((product, index) => {
-                const {FirstImg , price,name ,id} = product.value;
-                <tr key={id}>
-                  <td className='border'>
-                    <div className='flex justify-center'>
-                      <img src={FirstImg} className='w-[150px] h-[180px]' />
-                    </div>
-                 </td>
-                  <td className='border'><a href='#' className='hover:text-rose-600 font-semibold'>{name}</a></td>
-                  <td className='border'>{ price}</td>
-                  <td className='border'><input min="1" type="number" defaultValue="1" name="qty" className="border p-3 font-bold"
-                  /></td>
-                  <td className='border'>{price}</td>
-                  <td className='border'><button className='bg-rose-600 text-white text-xs ps-5 pe-5 pt-3 pb-3 rounded-md font-bold'>Add To Cart</button></td>
-                  <td className='border'><button>Remove</button></td>
-                </tr>
-})
-: <h1 className='font-bold text-2xl'>Cart is empty....!</h1>}
-              </tbody>
-              {/* You might need to add rows for each item in the cart */}
+                const { FirstImg, price, name, id } = product;
+                
+                return (
+                  <tr key={id} className='text-center'>
+                    <td className='border'>
+                      <div className='flex justify-center'>
+                        <img src={FirstImg} className='w-[150px] h-[180px]' />
+                      </div>
+                    </td>
+                    <td className='border hover:text-rose-600 font-semibold'>{name}</td>
+                    <td className='border'>{price}</td>
+                    <td className='border'><input min="1" type="number" defaultValue="1" name="qty" className="border p-3 font-bold" /></td>
+                    <td className='border'>{price}</td>
+                    {/* <td className='border'><button className='bg-rose-600 text-white text-xs ps-5 pe-5 pt-3 pb-3 rounded-md font-bold' onClick={()=>send(product)}>Add To Cart</button></td> */}
+                    <td className='border'>
+                        <button onClick={() => remove(id)}>Remove</button>
+                    </td>
+                  </tr>
+                );
+              })
+            : <tr><td colSpan="7" className='text-center text-2xl font-bold mt-3'>Cart is empty....!</td></tr>}
+          </tbody> 
+
             </table>
             <div className='grid grid-cols-1 grid-rows-1 gap-2 mt-10'>
               <div className='grid grid-rows-1 '>
-                <div className='flex justify-between'>
+                <div className='flex justify-between my-auto'>
                   <div className='flex gap-2'>
                     <input type="text" placeholder='Coupon Code' className='border p-2 rounded-lg' />
                     <button className='bg-rose-600 rounded-lg text-white text-sm font-bold pt-3 pb-3 ps-5 pe-5'>Apply Coupon</button>

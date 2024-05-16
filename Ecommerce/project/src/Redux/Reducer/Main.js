@@ -3,9 +3,10 @@
 //(object wise)
 
 import {combineReducers} from "redux";
-import {cartreducer} from "./Reducer";
+import {cartreducer,wishlistreducer} from "./Reducer";
 const rootreducer = combineReducers({
-    cartreducer
+    cartreducer,
+    wishlistreducer
 })
 
 export default rootreducer;

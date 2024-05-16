@@ -11,7 +11,8 @@ import { useSelector } from 'react-redux';
 function Navbar() {
 
     const data = useSelector((state)=>state.cartreducer.carts)
-    console.log(data,"data");
+    const wishlists = useSelector((state)=>state.wishlistreducer.wishlist)
+    // console.log(data,"data");
     const naviGetSignIn = useNavigate();
     const naviGetWishlist = useNavigate();
 
@@ -88,7 +89,7 @@ function Navbar() {
                                             </li>
                                             
                                         <li><Link to="/signin"><i class="fa-regular fa-user fa-lg"></i></Link></li>
-                                        <li><Link to="/wishlist"><i class="fa-regular fa-heart fa-lg" ></i><span className='absolute top-[5%] right-[1%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>0</span></Link></li>
+                                        <li><Link to="/wishlist"><i class="fa-regular fa-heart fa-lg" ></i><span className='absolute top-[5%] right-[1%] rounded-full bg-red-500 ps-1 pe-1 text-white text-xs'>{wishlists.length}</span></Link></li>
                                     </ul>
                                 {/* </div> */}
                             </div>

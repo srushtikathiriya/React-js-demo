@@ -4,12 +4,24 @@ import { FaStar } from "react-icons/fa6";
 import { CiHeart } from "react-icons/ci";
 import Data from "../../Component/Second-part/Data"
 import { useParams } from 'react-router-dom';
+import {ADD,WISHLIST_ADD} from "../../Redux/Action/Action";
+import {useDispatch } from 'react-redux';
+
 
 
 function Productdetails()   {
     const{ id } = useParams();
     // const product = ProductData[(id)];
     const product = Data.find((item) => item.id === id);// Find product by ID
+    const dispatch = useDispatch();
+    const send = (e)=>{
+        // console.log(e,"eeeee");
+        dispatch(ADD(e));
+    }
+    const wishlistsend = (e)=>{
+        // console.log(e,"eeeee");
+        dispatch(WISHLIST_ADD(e));
+    }
     return (
         <div>
             <div>
@@ -51,8 +63,8 @@ function Productdetails()   {
 
                         <div className='flex flex-wrap mt-5 gap-5'>
                             <input min="1" type="number" defaultValue="1" name="qty" className="border p-3 font-bold" />
-                            <button className='text-white bg-rose-600 hover:bg-black ps-10 pe-10 rounded-md'>Add To Cart</button>
-                            <button className='hover:text-white border hover:bg-rose-600 p-5 rounded-md '><CiHeart className='text-xl font-semibold'/></button>
+                            <button className='text-white bg-rose-600 hover:bg-black ps-10 pe-10 rounded-md' onClick={()=>send(product)}>Add To Cart</button>
+                            <button className='hover:text-white border hover:bg-rose-600 p-5 rounded-md ' onClick={()=>wishlistsend(product)}><CiHeart className='text-xl font-semibold'/></button>
                         </div>
 
                     </div>
