@@ -17,41 +17,7 @@ export const cartreducer = (state=initial_state,action) =>{
                 ...state,
                 carts:data,
             };
-            // case "INCREASE_CART_COUNT" : {
-            //     let updatedCartList = state.carts.map(item => {
-            //         if (item.id === action.payload.id) {
-            //             return {
-            //                 ...item,
-            //                 quantity: item.quantity + 1
-            //             };
-            //         }
-            //         return item;
-            //     })
-            //     return {
-            //         ...state,
-            //         carts: updatedCartList
-            //     };
-            // }
-            // case "DECREASE_CART_COUNT" : {
-            //     let updatedCartList = state.carts ;
-            //     if(action.payload.quantity !== 1){
-            //         updatedCartList = state.carts.map(item => {
-            //             if (item.id === action.payload.id) {
-            //                 return {
-            //                     ...item,
-            //                     quantity: item.quantity - 1
-            //                 };
-            //             }
-            //             return item;
-            //         });
-            //     }
-            //     return {
-            //         ...state,
-            //         carts: updatedCartList
-            //     };
-    
-            // }
-
+        
             case "UPDATE_QUANTITY":
                 return {
                     ...state,

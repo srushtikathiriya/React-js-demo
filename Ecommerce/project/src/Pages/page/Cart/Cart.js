@@ -1,10 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import Breadcrumb from '../../Asset/breadcrumb-01.jpg';
 import Propsheading from '../../Propsheading/Propsheading';
-import { VscTriangleUp, VscTriangleDown } from "react-icons/vsc";
-import { REMOVE, ADD, Cart_Incr, Cart_Dec, UPDATE_QUANTITY } from "../../../Redux/Action/Action";
+import { REMOVE, UPDATE_QUANTITY } from "../../../Redux/Action/Action";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "../Cart/Cart.css";

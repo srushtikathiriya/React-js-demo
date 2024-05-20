@@ -26,22 +26,6 @@ export const WISHLIST_REMOVE = (id) => {
 }
 }
 
-
-
-// export const Cart_Incr = (item) => {
-//     return{
-//         type:"INCREACE_CART_COUNT",
-//         payload:item
-// }
-// }
-
-// export const Cart_Dec = (id) => {
-//     return{
-//         type:"DECREASE_CART_COUNT",
-//         payload:id
-// }
-// }
-
 export const UPDATE_QUANTITY = (id , quantity) => {
     return {
         type : "UPDATE_QUANTITY",
