@@ -5,6 +5,36 @@ import { useSelector ,useDispatch } from 'react-redux';
 import {ADD, WISHLIST_REMOVE} from "../../../Redux/Action/Action";
 
 
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
+function showAlerts_Success() {
+  toast.success('Your item has been added to the cart list!',{
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+  });    
+}
+
+function showAlerts_Error() {
+  toast.error('a quick reminder that you have an item that removed from the list',
+  {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+  });
+}
+
 function Wishlist() {
   const wishlists = useSelector((state)=>state.wishlistreducer.wishlist)
   // console.log(data);
@@ -13,17 +43,20 @@ function Wishlist() {
   const  wishlistremove = (id) => {
     // console.log("id",id);
     dispatchs(WISHLIST_REMOVE(id));
+    showAlerts_Error();
   };
   const wishlistsend = (e,id)=>{
     // console.log(e,"eeeee");
     dispatchs(ADD(e));
     dispatchs(WISHLIST_REMOVE(id));
+    showAlerts_Success() ;
 }
 
   return (
     <div>
       <div className=''>
         <Propsheading title="Wishlist" />
+        <ToastContainer/>
 
         <div>
           <div className='p-20'>

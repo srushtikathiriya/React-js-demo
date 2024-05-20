@@ -43,11 +43,6 @@
     opacity: 0;
     background-color: white;  
 }
-.btn{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .button:hover .btn{
     opacity: 1;
 }

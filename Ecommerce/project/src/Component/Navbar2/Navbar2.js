@@ -113,16 +113,16 @@ function Asidebar() {
                       <div className='menu-contact '>
                         <ul className='flex items-center'>
                           <li className='mr-5'>
-                            <a href="#" className='hover:text-red-500'>
+                            <Link to="*" className='hover:text-red-500'>
                               <i class="fa-solid fa-phone-flip mr-2 text-red-600"></i>
                               908. 408. 501. 89
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="#" className='hover:text-red-500'>
+                            <Link to="/shoplocation" className='hover:text-red-500'>
                               <i class="fa-solid fa-location-dot mr-2 text-red-600"></i>
                               Find Store
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
