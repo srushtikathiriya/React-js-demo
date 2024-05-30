@@ -14,7 +14,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function showAlert() {
-  toast.success('Successfully logged in', {
+  toast.success('Successfully loggin', {
     position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -60,16 +60,19 @@ function Login() {
   const getEmail = localStorage.getItem("Email");
   const getPassword = localStorage.getItem("Password");
 
+  
   function onLoginFun(e) {
     e.preventDefault();
     if (!email && !password) {
       show_Error_Alert();
     } else if (email !== getEmail && password !== getPassword) {
       show_Error();
-    } else {
+    } 
+    else {
       showAlert();
     }
-  }
+    navigate('/');
+  } 
 
   return (
     <div className="m-5 flex justify-center items-center">

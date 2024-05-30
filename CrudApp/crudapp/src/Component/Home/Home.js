@@ -44,7 +44,6 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
       <section className="w-full">
         <div className="mt-6 flex flex-col">
           <div className="overflow-x-auto">
@@ -73,12 +72,12 @@ export default function Home() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 bg-white">
-                    {data.map((value) => (
+                    {data.map((value,index) => (
                       <tr key={value.id} className="divide-x divide-gray-200">
                         <td className="whitespace-nowrap px-4 py-4">
                           <div className="flex justify-center items-center">
                             <div>
-                              <div className="text-sm text-gray-900">{value.id}</div>
+                              <div className="text-sm text-gray-900">{index + 1}</div>
                             </div>
                           </div>
                         </td>

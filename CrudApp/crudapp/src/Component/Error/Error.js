@@ -12,7 +12,7 @@ function Error() {
     };
     return (
         <div>
-            <Navbar/>
+            {/* <Navbar/> */}
             <div className='relative'>
                 <img src={Breadcrumb} alt="" className='h-[200px]' />
                 <div className='absolute top-14 left-20 breadcrumb-item-active'>

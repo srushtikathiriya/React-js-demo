@@ -46,18 +46,22 @@ function Register() {
     if (!fname || !email || !password) {
       showErrorAlert();
     } else {
+      const newUser = {
+        firstname: fname,
+        email: email,
+        password: password,
+      };
+      const users = JSON.parse(localStorage.getItem("users")) || [];  // Retrieve existing users from localStorage
+      users.push(newUser);   // Add the new user to the array      
+      localStorage.setItem("users", JSON.stringify(users));    //Store the updated array back in localStorage
       showAlert();
-      localStorage.setItem("Firstname", fname);
-      localStorage.setItem("Email", email);
-      localStorage.setItem("Password", password);
-      // localStorage.setItem("Gender", gender);
-      // navigate("/")
+      navigate("/login");
     }
   }
 
-  const backToHome = () => {
-    navigate('/');
-  };
+  // const backToHome = () => {
+  //   navigate('/login');
+  // };
 
   return (
     <div className="m-3 flex justify-center items-center">

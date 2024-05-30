@@ -8,21 +8,13 @@ const menuItems = [
     to : '/'
   },
   {
-      name: 'Create',
-      to : '/create'
+      name: 'About',
+      to : '/about'
     },
     {
-      name: 'Edit',
-      to : '/edit'
+      name: 'Contact',
+      to : '/contact'
     },
-  {
-    name: 'Register',
-    to : '/register'
-  },
-  {
-    name: 'LogIn',
-    to : '/login'
-  },
 ]
 
 export default function Navbar() {
@@ -33,7 +25,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className="relative w-full bg-white  shadow-md mb-10">
+    <div className="relative w-full bg-white  shadow-md mb-2">
       <div className="mx-auto flex max-w-[95%] items-center justify-between py-5">
       <div className="inline-flex items-center space-x-2">
           <span>
@@ -54,7 +46,7 @@ export default function Navbar() {
          
         
         </div>
-        <div className="hidden grow items-start lg:flex justify-end">
+        <div className="hidden grow items-start lg:flex justify-center~">
           <ul className="ml-12 inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
@@ -63,6 +55,7 @@ export default function Navbar() {
                   className="text-sm font-semibold text-gray-800 hover:text-gray-900"
                 >
                   {item.name}
+                  
                 </Link>
               </li>
             ))}
@@ -75,6 +68,26 @@ export default function Navbar() {
             placeholder="Serach"
           ></input>
         </div>
+
+        <div className="hidden space-x-2 lg:block">
+          <Link to="/register">          
+          <button
+            type="button"
+            className="rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-black hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          >
+            Sign In
+          </button>
+          </Link>
+          <Link to="/login">          
+          <button
+            type="button"
+            className="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          >
+            Log In
+          </button>
+          </Link>
+        </div>
+
         <div className="lg:hidden">
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
         </div>
