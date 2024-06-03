@@ -1,0 +1,8 @@
+{
+    "users": [
+      { "id": "1", "fname": "srushti", "lname": "kathiriya","age":22 },
+      { "id": "2", "fname": "mansi", "lname": "vaghasiya","age":25 },
+      { "id": "3", "fname": "keni", "lname": "kakadiya","age":20 }   
+    ]
+
+  }

@@ -57,21 +57,37 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const getEmail = localStorage.getItem("Email");
-  const getPassword = localStorage.getItem("Password");
+  // const getEmail = localStorage.getItem("Email");
+  // const getPassword = localStorage.getItem("Password");
 
   
   function onLoginFun(e) {
     e.preventDefault();
+    const crudUsers = JSON.parse(localStorage.getItem("users"));
+    const loginuser = crudUsers.find(loginuser => loginuser.email === email && loginuser.password === password)
     if (!email && !password) {
       show_Error_Alert();
-    } else if (email !== getEmail && password !== getPassword) {
-      show_Error();
     } 
-    else {
-      showAlert();
+
+    if(loginuser){
+      // showAlert()
+      alert("successfully registered");
+
+      navigate('/home');
     }
-    navigate('/');
+
+    if(!loginuser){
+      show_Error()
+      // alert("fill cureedrypt");
+    }
+
+
+    // else if (email !== getEmail && password !== getPassword) {
+    //   show_Error();
+    // } 
+    // else {
+    //   showAlert();
+    // }
   } 
 
   return (

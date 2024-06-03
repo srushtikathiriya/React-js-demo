@@ -25,24 +25,30 @@ function Signin() {
 
   function onRegistersubmit(e){
     e.preventDefault();
-        if(!email && !password){
+        if(!email || !password){
           alert("please fill all filde");
         }
         else{
+          const newUser = {
+            firstname: fname,
+            email: email,
+            password: password,
+          };
+          const users = JSON.parse(localStorage.getItem("users")) || [];  // Retrieve existing users from localStorage
+          users.push(newUser);   // Add the new user to the array      
+          localStorage.setItem("users", JSON.stringify(users));    //Store the updated array back in localStorage
+          navigate("/login");
           // alert("successfully register")
           Swal.fire({
             title: "successfully register",
             icon: "success"
           });
-          localStorage.setItem("Email",email);
-          localStorage.setItem("Password",password);
-          // navigate("/")
         }
   }
 
   function onLoginFun(e){
     e.preventDefault();
-    if(!email && !password){
+    if(!email || !password){
       alert("please fill all filde");
     }
     else if(email !== getEmail && password !== getPassword){

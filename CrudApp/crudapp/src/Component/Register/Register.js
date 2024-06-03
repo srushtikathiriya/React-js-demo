@@ -4,9 +4,21 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 import Lottie from "lottie-react";
 import Registeranim from "../Assect/Animation - 1716356894099.json";
 
+// import {useFormik} from "formik"
+// import * as Yup from "yup";
+
 // Toasty alert
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+
+// const signupSchema = Yup.object({
+//   email:Yup.string().email("Invalid email").required("Email is Required Field"),
+//   password:Yup.string()
+//   .min(2,"Too Short!")
+//   .max(10,"Too Long")
+//   .required("Password is Required Field")
+// });
 
 function showAlert() {
   toast.success('Successfully registered', {
@@ -51,17 +63,13 @@ function Register() {
         email: email,
         password: password,
       };
-      const users = JSON.parse(localStorage.getItem("users")) || [];  // Retrieve existing users from localStorage
-      users.push(newUser);   // Add the new user to the array      
-      localStorage.setItem("users", JSON.stringify(users));    //Store the updated array back in localStorage
+      const users = JSON.parse(localStorage.getItem("users")) || []; 
+      users.push(newUser);      
+      localStorage.setItem("users", JSON.stringify(users));
       showAlert();
       navigate("/login");
     }
   }
-
-  // const backToHome = () => {
-  //   navigate('/login');
-  // };
 
   return (
     <div className="m-3 flex justify-center items-center">
