@@ -4,17 +4,15 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Home() {
-  const active = {
-    backgroundColor: '#E8E5E4'
-  };
-
   const [data, setData] = useState([]);
+  
   // Pagination
   const [page, setPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(2);
-  const dataPerPage = itemsPerPage;
-  const totalItems = data.length;
-  const totalPages = Math.ceil(totalItems / dataPerPage);
+
+  // searchbar
+  const [searchTerm, setSearchTerm] = useState('');
+
 
   // Pagination handlers
   const handlePrevious = () => {
@@ -29,22 +27,31 @@ export default function Home() {
     setPage(pageNumber);
   };
 
-  const handleItemsPerPageChange = (event) => {
-    const value = parseInt(event.target.value);
+  const handleItemsPerPageChange = (e) => {
+    const value = parseInt(e.target.value);
     setItemsPerPage(value);
     setPage(1);
   };
 
+  // Search
+  const filterData = data.filter(user =>
+    user.firstname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.lastname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.age.toString().includes(searchTerm)
+  );
+
   const indexOfLastItem = page * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentData = data.slice(indexOfFirstItem, indexOfLastItem);
+  const currentData = filterData.slice(indexOfFirstItem, indexOfLastItem);
+  const totalItems = filterData.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   // Load users
   const loadUser = async () => {
     const res = await axios.get('http://localhost:3001/users');
     console.log(res.data, "res");
     setData(res.data);
-};
+  };
 
   // second way
 
@@ -77,15 +84,23 @@ export default function Home() {
       <section className="w-full">
         <div className="mt-6 flex flex-col">
           <div className="overflow-x-auto">
-            <div className='px-8'>
-              <button
-                type="button"
-                className="rounded-md float-end bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-              >
-                <Link to="/create">        
-                  Add new Student
-                </Link>
-              </button>
+        <div className='px-8'>
+          <button
+            type="button"
+            className="rounded-md float-end bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          >
+            <Link to="/create">
+              Add new Student
+            </Link>
+          </button>
+        </div>
+            <div className="flex justify-end pe-3">
+              <input
+                className="flex h-10 w-[250px] rounded-md bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 "
+                type="text"
+                placeholder="Serach"
+                onChange={(e) => setSearchTerm(e.target.value)}
+              ></input>
             </div>
             <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
               <div className="overflow-hidden border border-gray-200 md:rounded-lg">

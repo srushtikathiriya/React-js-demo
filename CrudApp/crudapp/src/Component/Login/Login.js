@@ -1,99 +1,43 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowRightLong } from 'react-icons/fa6';
-import { IoLockClosedOutline, IoKeyOutline } from 'react-icons/io5';
-import { FaRegUser } from 'react-icons/fa';
 import Lottie from "lottie-react";
 import Loginanim from "../Assect/Animation - 1716362067004.json";
-import { ArrowRight } from 'lucide-react'
 
-import Swal from 'sweetalert2';
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
-// Toasty alert
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-function showAlert() {
-  toast.success('Successfully loggin', {
-    position: "bottom-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-  });
-}
-
-function show_Error_Alert() {
-  toast.error("Please fill all fields", {
-    position: "bottom-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-  });
-}
-
-function show_Error() {
-  toast.error("Please fill correct details", {
-    position: "bottom-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-  });
-}
+const signupSchema = Yup.object({
+  email: Yup.string().email("Invalid email").required("Email is a required field"),
+  password: Yup.string()
+    .min(3, "Too short!")
+    .max(20, "Too long")
+    .required("Password is a required field"),
+});
 
 function Login() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  // const getEmail = localStorage.getItem("Email");
-  // const getPassword = localStorage.getItem("Password");
-
-  
-  function onLoginFun(e) {
-    e.preventDefault();
-    const crudUsers = JSON.parse(localStorage.getItem("users"));
-    const loginuser = crudUsers.find(loginuser => loginuser.email === email && loginuser.password === password)
-    if (!email && !password) {
-      show_Error_Alert();
-    } 
-
-    if(loginuser){
-      // showAlert()
-      alert("successfully registered");
-
-      navigate('/home');
-    }
-
-    if(!loginuser){
-      show_Error()
-      // alert("fill cureedrypt");
-    }
-
-
-    // else if (email !== getEmail && password !== getPassword) {
-    //   show_Error();
-    // } 
-    // else {
-    //   showAlert();
-    // }
-  } 
+  const { values, handleSubmit, handleChange, errors, touched } = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: signupSchema,
+    onSubmit: (values) => {
+      const crudUsers = JSON.parse(localStorage.getItem("users")) || [];
+      const loginUser = crudUsers.find(user => user.email === values.email && user.password === values.password);
+      
+      if (loginUser) {
+        navigate('/home');
+      } else {
+        alert("Incorrect email or password");
+      }
+    },
+  });
 
   return (
     <div className="m-5 flex justify-center items-center">
       <div>
-        <ToastContainer />
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="bg-stone-200 shadow-md overflow-hidden h-[500px] order-1 lg:order-2">
             <Lottie animationData={Loginanim} loop={true} className="w-full h-full object-cover" />
@@ -111,7 +55,7 @@ function Login() {
                   Create a free account
                 </a>
               </p>
-              <form action="#" method="POST" className="mt-8" onSubmit={onLoginFun}>
+              <form action="#" method="POST" className="mt-8" onSubmit={ handleSubmit}>
                 <div className="space-y-5">
                   <div>
                     <label htmlFor="" className="text-base font-medium text-white">
@@ -123,8 +67,12 @@ function Login() {
                         className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent text-white px-3 py-2 text-sm placeholder:text-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                         type="email"
                         placeholder="Email"
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={handleChange}
+                        value={values.email}
                       />
+                      {touched.email && errors.email ? (
+                        <p className="text-red-500 text-sm">{errors.email}</p>
+                      ) : null}
                     </div>
                   </div>
                   <div>
@@ -147,8 +95,12 @@ function Login() {
                         className="flex h-10 w-full rounded-md border text-white border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                         type="password"
                         placeholder="Password"
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={handleChange}
+                        value={values.password}
                       />
+                      {touched.password && errors.password ? (
+                        <p className="text-red-500 text-sm">{errors.password}</p>
+                      ) : null}
                     </div>
                   </div>
                   <div>

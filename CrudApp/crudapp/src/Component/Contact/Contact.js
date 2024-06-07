@@ -33,12 +33,12 @@ export default function ContactPageTwo() {
           <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
             {/* contact from */}
             <div className="flex items-center justify-center">
-              <div className="px-2 md:px-12">
+              <div className="px-2 md:px-12"> 
                 <p className="text-2xl font-bold text-gray-900 md:text-4xl">Get in touch</p>
                 <p className="mt-4 text-lg text-gray-600">
                   Our friendly team would love to hear from you.
                 </p>
-                <form action="" className="mt-8 space-y-4">
+                <form action="https://formspree.io/f/myyroqo" method="POST" className="mt-8 space-y-4">
                   <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
                     <div className="grid w-full  items-center gap-1.5">
                       <label
@@ -51,6 +51,7 @@ export default function ContactPageTwo() {
                         className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                         type="text"
                         id="first_name"
+                        name='first_name'
                         placeholder="First Name"
                       />
                     </div>
@@ -66,6 +67,7 @@ export default function ContactPageTwo() {
                         type="text"
                         id="last_name"
                         placeholder="Last Name"
+                        name='last_name'
                       />
                     </div>
                   </div>
@@ -81,6 +83,7 @@ export default function ContactPageTwo() {
                       type="text"
                       id="email"
                       placeholder="Email"
+                      name='email'
                     />
                   </div>
                   <div className="grid w-full  items-center gap-1.5">
@@ -95,6 +98,7 @@ export default function ContactPageTwo() {
                       type="tel"
                       id="phone_number"
                       placeholder="Phone number"
+                      name='phone_number'
                     />
                   </div>
                   <div className="grid w-full  items-center gap-1.5">
@@ -108,11 +112,12 @@ export default function ContactPageTwo() {
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                       id="message"
                       placeholder="Leave us a message"
+                      name='message'
                       cols={3}
                     />
                   </div>
                   <button
-                    type="button"
+                    type="submit"
                     className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Send Message
@@ -141,7 +146,7 @@ export default function ContactPageTwo() {
           <div className="my-8 flex flex-col gap-y-6 md:flex-row lg:justify-evenly">
           {locations.map((location) => (
             <div key={location.title} className="flex justify-center flex-col space-y-3 md:w-2/4 lg:w-1/5">
-              <MapPin className="h-5 w-5 " />
+              <span className='flex justify-center'><MapPin className="h-5 w-5" /></span>
               <p className="w-full text-xl font-semibold  text-gray-900">{location.title}</p>
               <p className="w-full text-base text-gray-700">{location.timings}</p>
               <p className="text-sm font-medium">{location.address}</p>

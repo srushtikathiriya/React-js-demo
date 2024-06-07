@@ -1,146 +1,127 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import Lottie from "lottie-react";
 import Registeranim from "../Assect/Animation - 1716356894099.json";
 
-// import {useFormik} from "formik"
-// import * as Yup from "yup";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
-// Toasty alert
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-
-// const signupSchema = Yup.object({
-//   email:Yup.string().email("Invalid email").required("Email is Required Field"),
-//   password:Yup.string()
-//   .min(2,"Too Short!")
-//   .max(10,"Too Long")
-//   .required("Password is Required Field")
-// });
-
-function showAlert() {
-  toast.success('Successfully registered', {
-    position: "bottom-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-  });
-}
-
-function showErrorAlert() {
-  toast.error("Please fill all fields", {
-    position: "bottom-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "colored",
-  });
-}
+const signupSchema = Yup.object({
+  fname: Yup.string().required("First name is a required field"),
+  email: Yup.string().email("Invalid email").required("Email is a required field"),
+  password: Yup.string()
+    .min(3, "Too short!")
+    .max(20, "Too long")
+    .required("Password is a required field"),
+});
 
 function Register() {
   const navigate = useNavigate();
-  const [fname, setFname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  // const [gender, setGender] = useState("");
 
-  function onRegisterSubmit(e) {
-    e.preventDefault();
-    if (!fname || !email || !password) {
-      showErrorAlert();
-    } else {
+  const {values,handleSubmit,handleChange,errors,touched} = useFormik({
+    initialValues: {
+      fname: "",
+      email: "",
+      password: "",
+    },
+    validationSchema: signupSchema,
+    onSubmit: (values) => {
       const newUser = {
-        firstname: fname,
-        email: email,
-        password: password,
+        firstname: values.fname,
+        email: values.email,
+        password: values.password,
       };
-      const users = JSON.parse(localStorage.getItem("users")) || []; 
-      users.push(newUser);      
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      users.push(newUser);
       localStorage.setItem("users", JSON.stringify(users));
-      showAlert();
+      alert("Successfully registered")
       navigate("/login");
-    }
-  }
+    },
+  });
 
   return (
     <div className="m-3 flex justify-center items-center">
       <div>
-        <ToastContainer />
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="bg-stone-100 shadow-md overflow-hidden h-auto flex justify-center items-center">
             <Lottie animationData={Registeranim} loop={true} className="w-full max-w-md" />
           </div>
           <div className='bg-slate-500 shadow-md overflow-hidden order-2 lg:order-1 p-8 flex items-center'>
             <div className="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
-              <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">Sign in</h2>
+              <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">Sign up</h2>
               <p className="mt-2 text-sm text-white">
-                Don&apos;t have an account?{' '}
+                Already have an account?{' '}
                 <a
-                  href="#"
+                  href="/login"
                   title=""
                   className="font-bold text-black  transition-all duration-200 hover:underline"
                 >
-                  Create a free account
+                  Sign in
                 </a>
               </p>
-              <form action="#" method="POST" className="mt-8" onSubmit={onRegisterSubmit}>
+              <form className="mt-8" onSubmit={handleSubmit}>
                 <div className="space-y-5">
                   <div>
-                    <label htmlFor="" className="text-base font-medium text-white">
-                      {' '}
-                      First Name{' '}
+                    <label htmlFor="fname" className="text-base font-medium text-white">
+                      First Name
                     </label>
                     <div className="mt-2">
                       <input
                         className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-white placeholder:text-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                         type="text"
+                        id="fname"
+                        name="fname"
                         placeholder="First name"
-                        onChange={(e) => setFname(e.target.value)}
+                        onChange={handleChange}
+                        value={values.fname}
                       />
+                      {touched.fname && errors.fname ? (
+                        <p className="text-red-500 text-sm">{errors.fname}</p>
+                      ) : null}
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="" className="text-base font-medium text-white">
-                      {' '}
-                      Email address{' '}
+                    <label htmlFor="email" className="text-base font-medium text-white">
+                      Email address
                     </label>
                     <div className="mt-2">
                       <input
                         className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-white  placeholder:text-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                         type="email"
+                        id="email"
+                        name="email"
                         placeholder="Email"
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={handleChange}
+                        value={values.email}
                       />
+                      {touched.email && errors.email ? (
+                        <p className="text-red-500 text-sm">{errors.email}</p>
+                      ) : null}
                     </div>
                   </div>
                   <div>
-                    <div className="flex items-center justify-center">
-                      <label htmlFor="" className="text-base font-medium text-white">
-                        {' '}
-                        Password{' '}
-                      </label>
-                    </div>
+                    <label htmlFor="password" className="text-base font-medium text-white">
+                      Password
+                    </label>
                     <div className="mt-2">
                       <input
                         className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm text-white  placeholder:text-white focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                         type="password"
+                        id="password"
+                        name="password"
                         placeholder="Password"
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={handleChange}
+                        value={values.password}
                       />
+                      {touched.password && errors.password ? (
+                        <p className="text-red-500 text-sm">{errors.password}</p>
+                      ) : null}
                     </div>
                   </div>
                   <div>
                     <button
-                      type='submit'
+                      type="submit"
                       className="w-full bg-orange-100 text-black hover:bg-rose-600 hover:text-white font-bold justify-center flex items-center p-4 rounded-lg text-center gap-4"
                     >
                       Register <FaArrowRightLong />

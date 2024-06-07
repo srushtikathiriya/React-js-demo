@@ -1,32 +1,32 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
-import {useFormik} from "formik"
+import { useFormik } from "formik"
 import * as Yup from "yup";
 
 const signupSchema = Yup.object({
-  email:Yup.string().email("Invalid email").required("Email is Required Field"),
-  password:Yup.string()
-  .min(2,"Too Short!")
-  .max(10,"Too Long")
-  .required("Password is Required Field")
+  email: Yup.string().email("Invalid email").required("Email is Required Field"),
+  password: Yup.string()
+    .min(2, "Too Short!")
+    .max(10, "Too Long")
+    .required("Password is Required Field")
 });
 
 export default function Register() {
 
-  const {values,handleSubmit,handleChange,errors,touched} = useFormik({
+  const { values, handleSubmit, handleChange, errors, touched } = useFormik({
     initialValues: {
-      name:"",
-      email:"",
-      password:"",
-      confirmpassword:"",
+      name: "",
+      email: "",
+      password: "",
+      confirmpassword: "",
     },
-    validationSchema:signupSchema,
-    onSubmit: (value) =>{
-        console.log(value,"value");
+    validationSchema: signupSchema,
+    onSubmit: (value) => {
+      console.log(value, "value");
     }
   })
 
-  console.log(touched,"touched")
+  console.log(touched, "touched")
   // console.log(values,"Formik");
   return (
     <section>
@@ -76,6 +76,9 @@ export default function Register() {
                     value={values.name}
                     onChange={handleChange}
                   ></input>
+                  {touched.name && errors.name ? (
+                    <p className="text-red-500 text-sm">{errors.name}</p>
+                  ) : null}
                 </div>
               </div>
               <div>
@@ -93,6 +96,9 @@ export default function Register() {
                     value={values.email}
                     onChange={handleChange}
                   ></input>
+                  {touched.email && errors.email ? (
+                    <p className="text-red-500 text-sm">{errors.email}</p>
+                  ) : null}
                 </div>
               </div>
               <div>
@@ -111,15 +117,17 @@ export default function Register() {
                     name='password'
                     value={values.password}
                     onChange={handleChange}
-
                   ></input>
+                  {touched.password && errors.password ? (
+                        <p className="text-red-500 text-sm">{errors.password}</p>
+                      ) : null}
                 </div>
               </div>
               <div>
                 <div className="flex items-center justify-between">
                   <label htmlFor="password" className="text-base font-medium text-gray-900">
                     {' '}
-                   Confirm Password{' '}
+                    Confirm Password{' '}
                   </label>
                 </div>
                 <div className="mt-2">

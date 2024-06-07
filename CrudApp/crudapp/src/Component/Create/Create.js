@@ -39,7 +39,7 @@ export default function SignUpThree() {
           <h2 className="text-center text-2xl font-bold leading-tight text-black">
            create student
           </h2>
-          {/* <p className="mt-2 text-center text-base text-gray-600">
+          <p className="mt-2 text-center text-base text-gray-600">
             Already have an account?{' '}
             <a
               href="#"
@@ -48,11 +48,11 @@ export default function SignUpThree() {
             >
               Sign In
             </a>
-          </p> */}
+          </p>
           <form action="#" method="POST" className="mt-1" onSubmit={onSubmitStudent}>
             <div className="space-y-5">
               <div>
-                <label htmlFor="name" className="text-base font-medium text-white">
+                <label htmlFor="name" className="text-base font-medium text-black">
                   {' '}
                   First Name{' '}
                 </label>
@@ -60,7 +60,7 @@ export default function SignUpThree() {
                   <input
                     className="flex h-10 w-full text-black rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-black focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="text"
-                    placeholder="Full Name"
+                    placeholder="First Name"
                     id="firstname"
                     name="firstname"
                     onChange={(e) => setStudent({...Student , firstname:e.target.value})}
