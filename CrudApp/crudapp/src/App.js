@@ -25,7 +25,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/" element={<Register/>} />
           <Route path="*" element={<Error/>} />
-          </Routes>
+        </Routes>
         </BrowserRouter>
     
     </div>

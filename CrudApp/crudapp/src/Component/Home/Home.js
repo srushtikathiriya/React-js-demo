@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   const [data, setData] = useState([]);
-  
+
   // Pagination
   const [page, setPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(2);
@@ -34,10 +34,10 @@ export default function Home() {
   };
 
   // Search
-  const filterData = data.filter(user =>
-    user.firstname.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.lastname.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.age.toString().includes(searchTerm)
+  const filterData = data.filter(users =>
+    users.firstname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    users.lastname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    users.age.toString().includes(searchTerm)
   );
 
   const indexOfLastItem = page * itemsPerPage;

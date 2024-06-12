@@ -38,7 +38,7 @@ export default function ContactPageTwo() {
                 <p className="mt-4 text-lg text-gray-600">
                   Our friendly team would love to hear from you.
                 </p>
-                <form action="https://formspree.io/f/myyroqo" method="POST" className="mt-8 space-y-4">
+                <form action="https://formspree.io/f/xnqeedyd" method="POST" className="mt-8 space-y-4">
                   <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
                     <div className="grid w-full  items-center gap-1.5">
                       <label
