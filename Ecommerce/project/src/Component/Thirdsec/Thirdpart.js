@@ -5,8 +5,8 @@ import Pots from "../Asset/floded-01.png"
 function Thirdpart() {
     
     return (
-        <div>
-            <div className='container  bg-stone-200'>
+        <div className='abstract-containers bg-stone-50'>
+            <div className='abstract-container bg-stone-200'>
                 <div className='grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-5'>
                     <div className='relative'>
                         <div className='absolute bg-rose-500 right-[40%] top-[20%] rounded-full pt-4 pb-4 ps-6 pe-6 text-white font-bold text-center transition ease-in-out animate-pulse duration-75 scale-110 -translate-y-1 '>

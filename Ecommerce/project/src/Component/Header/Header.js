@@ -86,31 +86,28 @@ function Header() {
                         </Swiper>
 
                         <div className="I-col-I">
-                                <div className="col-card-2">
-                                    <div className='col'>
-                                    <div className="card-1 relative">
-                                        <div className="card-1-head absolute top-6 left-6">
+                            <div className="col-card-2">
+                                <div className='col'>
+                                    <div className="card-1">
+                                        <div className="card-1-head">
                                             <h3 className='text-rose-600 font-semibold'> Hand made </h3>
                                             <h1 className='font-bold text-xl'>New Modern Stylist<br /> Crafts</h1>
                                         </div>
                                     </div>
-                                    </div>
-                                    <div className="I-col-II">
-                                        <div className="col-card-3">
-                                            <div className="card-2 relative">
-                                                <div className="card-2-head absolute top-6 left-6">
-                                                    <h3 className='text-rose-600 font-semibold'> Popular </h3>
-                                                    <h1 className='font-bold text-xl'>Energy with our newest collection</h1>
-                                                </div>
+                                </div>
+                                <div className="I-col-II">
+                                    <div className="col-card-3">
+                                        <div className="card-2 ">
+                                            <div className="card-2-head">
+                                                <h3 className='text-rose-600 font-semibold'> Popular </h3>
+                                                <h1 className='font-bold text-xl'>Energy with our newest collection</h1>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                       
-
+                        </div>
                     </div>
-
                 </header>
             </div>
 

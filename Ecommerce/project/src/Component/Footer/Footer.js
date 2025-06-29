@@ -13,9 +13,9 @@ function Footer() {
         // footer start
         <footer className='bg-stone-100'>
 
-            <div className='container  '>
+            <div className='footer-container  '>
                 <div className=''>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 border-b-2 pb-10'>
+                    <div className='grids grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 border-b-2 pb-10'>
                             {/* logo */}
                             <div className='Logo'>
                                 <a href="#">

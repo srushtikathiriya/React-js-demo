@@ -17,6 +17,7 @@ function Signin() {
   const navigate = useNavigate();
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
+  const [fname, setFname] = useState("");
 
   const data = [{email:email,password:password}]
 

@@ -1,12 +1,131 @@
-
 /* Navbar */
 
-.containers{
+.containers {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    padding: 0 32px;
+    margin: 0;
+    /* position: fixed;
+    top: 0;
+    z-index: 50; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 70px;
+    background: #fff;
+    gap: 16px;
+    /* position: fixed;
+    top: 0;
+    z-index: 50; */
+}
+
+.logo img {
+    height: 44px;
+    width: auto;
+    display: block;
+}
+
+.serch {
+    flex: 1;
     display: flex;
     justify-content: center;
-    width: 100%;
-    padding-inline: 70px;
-    flex-wrap: wrap;
+}
+
+.serch input {
+    width: 650px;
+    max-width: 800px;
+    min-width: 220px;
+    background: #f6f7fa;
+    border: none;
+    outline: none;
+    padding-left: 40px;
+    font-size: 1rem;
+    color: #888;
+    border-radius: 8px;
+    height: 44px;
+}
+
+.serch button {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.flag-state {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-flag img {
+    height: 24px;
+    width: 32px;
+    margin-right: 8px;
+}
+
+.lang-flag .dropbtns {
+    font-weight: 600;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.state select {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    background: #fff;
+    font-size: 1rem;
+}
+
+ul.flex {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.flex li {
+    position: relative;
+}
+
+ul.flex li span {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: #d51243;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+}
+
+@media (max-width: 900px) {
+    .serch input {
+        width: 220px;
+    }
+    .containers {
+        padding: 0 8px;
+    }
 }
 
 .dropbtns {
@@ -16,7 +135,6 @@
     
   }
 
-  
 .angle-downs:hover {
     color: red;
     transform: rotate(180deg);
@@ -62,12 +180,20 @@
     }
 }
 
-@media(max-width:1200px){
-  .containers{
+@media (max-width: 1200px) {
+  .containers {
     width: 100%;
+    padding: 0 8px;
   }
-  .menu-bar{
+  .flag-state {
     display: none;
+  }
+  /* Add any other mobile-specific styles here if needed */
+}
+
+@media (min-width: 1201px) {
+  .flag-state {
+    display: flex;
   }
 }
 
@@ -93,6 +219,7 @@
   .flag-state{
     display: none;
   }
+  
 }
 
 @media(max-width:576px){
@@ -108,4 +235,12 @@
   .search{
     display: none;
   }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%);}
+  to { transform: translateX(0);}
+}
+.animate-slideInLeft {
+  animation: slideInLeft 0.3s ease;
 }
