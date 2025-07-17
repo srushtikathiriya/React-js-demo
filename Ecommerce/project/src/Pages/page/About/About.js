@@ -25,11 +25,13 @@ function About() {
         <Propsheading title="About"/>
 
         <div className='container-4'>
-          <div className='grid grid-col-1'>
+          <div className='ninicos'>
+
+          <div className='grid grid-col-1' style={{width: "100%"}}>
             <div className='flex gap-5 relative'>
-              <img src={AboutImg1} alt="" className='w-[550px]' />
-              <img src={AboutImg2} alt="" className='w-[550px]' />
-              <span className='absolute text-[180px] top-48 left-[290px] font-bold text-white'>nin<span className='ps-1'>ico</span> </span>
+              <img src={AboutImg1} alt=""  />
+              <img src={AboutImg2} alt="" />
+              <span className='absolute text-[180px] top-[250px] left-[445px] font-bold text-white'>nin<span className='ps-1'>ico</span> </span>
             </div>
             <div>
             </div>
@@ -42,22 +44,22 @@ function About() {
           </div>
 
 
-          <div className='grid grid-col-3 mt-5'>
+          <div className='grid grid-col-3 mt-5' >
             <div className='flex gap-10'>
-
-              <p className='w-[400px] text-stone-500 font-medium'>
+              <p className='w-[500px] text-stone-500 font-medium'>
                 Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services without costly customization or add ons. Get orders to your customers in lots of ways by offering shipping, pickup, delivery, and even QR code ordering.
               </p>
-              <p className='w-[400px] text-stone-500 font-medium'>
+              <p className='w-[500px] text-stone-500 font-medium'>
                 Expand your reach and sell more using seamless integrations with Google, Instagram, Facebook, and more. Built- in SEO tools make it easy for shoppers to find your business on search engines. Get access to the entire suite of integrated Square solutions to help you run your business. Integration between Square Online and all Square point of sale systems makes inventory management easy. Subscribe to Square Marketing and easily send email promotions to your customers using the contact information
               </p>
 
-              <ul className='w-[250px]'>
+              <ul className='w-[300px]'>
                 <li className='hover:underline list-disc'>Orders go right to your restaurant point of sale, KDS, and kitchen</li>
                 <li className='hover:underline list-disc mt-4'>Provide in-person pickup, delivery by professional couriers</li>
                 <li className='hover:underline list-disc mt-4'>Offer in-person diners self-serve, contactless ordering via QR codes.</li>
               </ul>
             </div>
+          </div>
           </div>
 
           <div>
@@ -155,10 +157,10 @@ function About() {
           </div>
 
           <div>
-            <div className='grid grid-col-2 mt-20'>
+            <div className='grid grid-col-2 mt-20' style={{width:"100%"}}>
               <div className='flex gap-20 '>
-                <img src={Aboutbanner1} alt="" className='w-[500px]' />
-                <div className='block w-[500px]'>
+                <img src={Aboutbanner1} alt="" className='w-[500px]'/>
+                <div className='block '>
                   <h6 className='text-stone-500'>Features #01</h6>
                   <h1 className='font-bold text-3xl mt-2'>Solutions that work together</h1>
                   <p className='text-stone-500 font-semibold mt-5'>Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services.</p>
@@ -167,7 +169,7 @@ function About() {
               </div>
 
               <div className='flex gap-20 mt-10'>
-                <div className='block w-[500px]'>
+                <div className='block'>
                   <h6 className='text-stone-500'>Features #02</h6>
                   <h1 className='font-bold text-3xl mt-2'>All kinds of payments securely</h1>
                   <p className='text-stone-500 font-semibold mt-5'>Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services.</p>

@@ -100,7 +100,7 @@ function Shop2() {
                             {/* </div> */}
 
 
-                            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 bg-white pt-1 pb-5 ps-20 pe-20 mt-5 w-[1000px]'>
+                            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 bg-white pt-1 pb-5 ps-20 pe-20 mt-5 w-[100%]'>
 
                                 <div className='button'>
                                     <a href="#" className='burdges relative inline-block'>

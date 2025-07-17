@@ -16,7 +16,8 @@ export default function SignUpThree() {
   const onSubmitStudent = (e) => {
     e.preventDefault();
     axios.post("http://localhost:3001/users" , Student)
-    navigate("/");
+    console.log(Student , "Student");
+    navigate("/home");
   }
   return (
     <section>
